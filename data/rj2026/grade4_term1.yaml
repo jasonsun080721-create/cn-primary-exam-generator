@@ -1,7 +1,7 @@
-# 人教版（统编版）2026秋新版 四年级上册 · 起步题库
-# 只收录已核对的课文标题、文学常识和古诗原文。
-# 写字表、词语表、官方习作题目未逐页核对，不要在 textbook_words 里编造。
-# 不要粘贴仍受著作权保护的现代课文原文；阅读短文须自编或使用公有领域文本。
+# 人教版（统编版）2026秋新版 四年级上册
+# 目录、习作题目来自电子课本目录页。
+# textbook_words 只写入已从词语表页读清的词。看不清的课次不要补。
+# 不要粘贴仍受著作权保护的现代课文原文；阅读短文须自编。
 
 schema_version: 1
 
@@ -13,23 +13,23 @@ edition:
   term: 1
   book_name: 四年级上册
 
-paper_note: "古诗按统编教材通行文本录入。写字表、词语表和官方习作题目尚未收录；除已核对的文学常识、课文标题和古诗外，题目为自编练习。"
+paper_note: "古诗按统编教材通行文本录入。词语表只收录已从课本词语表页读清的词，未录完的课次不出那些词。识字表、写字表和各单元日积月累尚未逐字录全。除已核对的标题、习作题目、文学常识和古诗外，阅读与选词填空为自编练习。"
 
 unit_duration_minutes: 60
 
 todos:
-  - "对照 2026 秋新版纸质课本录入各课写字表、词语表，写入 textbook_words，source 用 textbook。"
-  - "核对《现代诗二首》的具体篇目后再著录诗题，不要沿用旧版猜测。"
-  - "核对各单元口语交际、官方习作题目和语文园地，替换自编习作。"
-  - "第 5–8 单元尚未收录。"
-  - "《观潮》《夜间飞行的秘密》《方帽子店》及神话课文的教材署名未逐页核对。"
+  - "词语表已核对第1、2、4、5、6课。第3课《现代诗二首》在词语表第1页上未见单独条目。第7课和不第8–27课的词语表还没从页面录完，不要用教辅听写单补。"
+  - "识字表、写字表已看到页面，但字小，除第1课外未逐字确认，暂不写入。"
+  - "各单元日积月累未逐页录全。有一页印着〔唐〕高适《别董大》，末句是“天下谁人不识君”，同一页没有看清单元号。"
+  - "《出塞》“龙城/卢城”未在本次页图里逐字核对。诗题已在目录页核对，正文暂用统编通行的“龙城”。"
+  - "《观潮》《夜间飞行的秘密》《方帽子店》《秋晚的江上》《花牛歌》及神话课文的教材署名，本次页图未逐行核对。"
 
 exam_ranges:
   midterm:
     label: 期中
-    units: [1, 2]
+    units: [1, 2, 3, 4]
     duration_minutes: 90
-    note: "起步数据把期中暂定为第 1–2 单元，请按学校实际进度修改。"
+    note: "按本项目约定，期中覆盖第1–4单元。课本目录本身不标注期中范围。"
     writing:
       id: midterm-write
       title: 一件我记得清楚的事
@@ -42,9 +42,9 @@ exam_ranges:
       word_count: 400
   final:
     label: 期末
-    units: [1, 2, 3, 4]
+    units: [1, 2, 3, 4, 5, 6, 7, 8]
     duration_minutes: 90
-    note: "起步数据只收录第 1–4 单元，期末卷目前只覆盖这些单元。"
+    note: "按本项目约定，期末覆盖第1–8单元。课本目录本身不标注期末范围。"
     writing:
       id: final-write
       title: 读课文以后
@@ -70,7 +70,8 @@ units:
         note: "巴金散文。此处不收录原文。"
       - title: 现代诗二首
         author_status: todo
-        note: "具体篇目未对照 2026 秋纸质课本，不著录诗题，也不出默写。"
+        pieces: [秋晚的江上, 花牛歌]
+        note: "篇目据电子课本目录。作者未在本次页图中核对，不出作者题，也不把现代诗当作古诗默写。"
     words:
       - word: 观潮
         source: lesson_title
@@ -78,7 +79,54 @@ units:
       - word: 繁星
         source: lesson_title
         detail: "课文标题《繁星》"
-    textbook_words: []
+    textbook_words:
+      - word: 奇观
+        detail: "词语表第1课《观潮》"
+      - word: 据说
+        detail: "词语表第1课《观潮》"
+      - word: 人山人海
+        detail: "词语表第1课《观潮》"
+      - word: 顿时
+        detail: "词语表第1课《观潮》"
+      - word: 风平浪静
+        detail: "词语表第1课《观潮》"
+      - word: 逐渐
+        detail: "词语表第1课《观潮》"
+      - word: 齐头并进
+        detail: "词语表第1课《观潮》"
+      - word: 浩浩荡荡
+        detail: "词语表第1课《观潮》"
+      - word: 山崩地裂
+        detail: "词语表第1课《观潮》"
+      - word: 霎时
+        detail: "词语表第1课《观潮》"
+      - word: 余波
+        detail: "词语表第1课《观潮》"
+      - word: 繁星
+        detail: "词语表第2课《繁星》"
+      - word: 密密麻麻
+        detail: "词语表第2课《繁星》"
+      - word: 忘记
+        detail: "词语表第2课《繁星》"
+      - word: 谈话
+        detail: "词语表第2课《繁星》"
+      - word: 渐渐
+        detail: "词语表第2课《繁星》"
+      - word: 模糊
+        detail: "词语表第2课《繁星》"
+        pinyin: mó hu
+      - word: 周围
+        detail: "词语表第2课《繁星》"
+      - word: 飞舞
+        detail: "词语表第2课《繁星》"
+      - word: 柔和
+        detail: "词语表第2课《繁星》"
+      - word: 梦幻
+        detail: "词语表第2课《繁星》"
+      - word: 怀抱
+        detail: "词语表第2课《繁星》"
+      - word: 沉睡
+        detail: "词语表第2课《繁星》"
     poems: []
     cloze_items:
       - id: u1-cloze-1
@@ -198,11 +246,11 @@ units:
             explanation: "顺序与短文最后一节一致即可。"
     writing:
       id: u1-write
-      title: 写一处自然景象
-      prompt: "你观察过潮水、星空、晚霞或一场雨吗？选一处印象最深的自然景象写下来。"
+      title: 推荐一个好地方
+      prompt: "选一个你觉得值得去的地方，向同学推荐它。写出这个地方是什么样的，以及你推荐它的理由。"
       requirements:
-        - "题目自拟。"
-        - "按一定顺序写，把看到的、听到的写清楚。"
+        - "题目自拟，点明推荐的地方。"
+        - "把地方的样子和推荐理由写清楚。"
         - "语句通顺，正确使用标点。"
       origin: original_practice
       word_count: 300
@@ -246,7 +294,74 @@ units:
       - word: 赛马
         source: lesson_title
         detail: "课文标题《田忌赛马》"
-    textbook_words: []
+    textbook_words:
+      - word: 暖洋洋
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 舒适
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 揭晓
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 身份
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 暖和
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 的确
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 曾经
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 打滚
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 水沟
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 注视
+        detail: "词语表第4课《一个豆荚里的五粒豆》"
+      - word: 蚊子
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 即使
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 问题
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 绳子
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 苍蝇
+        detail: "词语表第5课《夜间飞行的秘密》"
+        pinyin: cāng ying
+      - word: 证明
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 相互
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 配合
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 研究
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 类似
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 能够
+        detail: "词语表第5课《夜间飞行的秘密》"
+      - word: 帽子
+        detail: "词语表第6课《方帽子店》"
+      - word: 脑袋
+        detail: "词语表第6课《方帽子店》"
+        pinyin: nǎo dai
+      - word: 舒服
+        detail: "词语表第6课《方帽子店》"
+        pinyin: shū fu
+      - word: 假如
+        detail: "词语表第6课《方帽子店》"
+      - word: 设法
+        detail: "词语表第6课《方帽子店》"
+      - word: 懂事
+        detail: "词语表第6课《方帽子店》"
+      - word: 一溜烟
+        detail: "词语表第6课《方帽子店》"
+        pinyin: yí liù yān
+      - word: 各式各样
+        detail: "词语表第6课《方帽子店》"
+      - word: 摆放
+        detail: "词语表第6课《方帽子店》"
+      - word: 玻璃
+        detail: "词语表第6课《方帽子店》"
+        pinyin: bō li
     poems: []
     cloze_items:
       - id: u2-cloze-1
@@ -366,11 +481,11 @@ units:
             explanation: "意思相近即可。"
     writing:
       id: u2-write
-      title: 一个想了办法的人
-      prompt: "写一个小故事。故事里的人物遇到一件难事，想出一个办法，并把事情做完。"
+      title: 我的家人
+      prompt: "写一位家人。写出他（她）的特点，并用一件具体的事说明。"
       requirements:
-        - "题目自拟。"
-        - "写出人物怎么想、怎么做。"
+        - "题目自拟，点明写的是谁。"
+        - "写出这个人的特点，并用一件事说明。"
         - "有开头、经过和结果。"
       origin: original_practice
       word_count: 300
@@ -620,8 +735,8 @@ units:
             explanation: "答“细致观察”也可。"
     writing:
       id: u3-write
-      title: 我的观察记录
-      prompt: "选一种植物或小动物，连续观察几天。把每一次看到的变化写下来。"
+      title: 写观察日记
+      prompt: "选一种植物或小动物，连续观察几天。把每一次看到的变化写成一则观察日记。"
       requirements:
         - "题目自拟。"
         - "按时间顺序写，至少写出两个变化。"
@@ -796,11 +911,680 @@ units:
             explanation: "观点明确，并用短文中的做法作理由即可。"
     writing:
       id: u4-write
-      title: 和神话人物过一天
+      title: 我和____过一天
       prompt: "选一个你熟悉的神话人物，想象你和他（她）相处的一天。把见到的事按顺序写下来。"
       requirements:
         - "题目可以用“我和____过一天”，也可以自拟。"
         - "写出这个人物做了什么，你又做了什么。"
         - "想象要合理，语句要通顺。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 5
+    title: 第5单元
+    note: "课文标题据电子课本目录。阅读和选词填空是自编练习。习作题目为“生活万花筒”。"
+    lessons:
+      - title: 麻雀
+        author_status: todo
+        note: "课文写老麻雀救护小麻雀。教材署名本次未逐页核对，不出作者题。"
+      - title: 爬天都峰
+        author_status: todo
+        note: "写爬黄山天都峰。教材署名本次未核对。"
+    words:
+      - word: 麻雀
+        source: lesson_title
+        detail: "课文标题《麻雀》"
+      - word: 天都峰
+        source: lesson_title
+        detail: "课文标题《爬天都峰》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u5-cloze-1
+        bank: [勇敢, 马虎, 吵闹]
+        text: "看到别人遇到困难，他没有躲开，而是____地走上前。"
+        answer: 勇敢
+        origin: original_practice
+        explanation: "走上前帮助别人，用“勇敢”。"
+      - id: u5-cloze-2
+        bank: [保护, 忘记, 嘲笑]
+        text: "老麻雀张开翅膀，是为了____自己的孩子。"
+        answer: 保护
+        origin: original_practice
+        explanation: "张开翅膀护住孩子。"
+      - id: u5-cloze-3
+        bank: [终于, 从来, 偶然]
+        text: "石级又陡又长，我们休息了两次，____爬到了峰顶。"
+        answer: 终于
+        origin: original_practice
+        explanation: "经过努力到达，用“终于”。"
+      - id: u5-cloze-4
+        bank: [鼓励, 命令, 责备]
+        text: "下山时，一位老爷爷____我说：“你真是个勇敢的孩子。”"
+        answer: 鼓励
+        origin: original_practice
+        explanation: "称赞并打气，是鼓励。"
+      - id: u5-cloze-5
+        bank: [顺序, 价钱, 天气]
+        text: "把一件事写清楚，要按一定的____写。"
+        answer: 顺序
+        origin: original_practice
+        explanation: "叙事要有顺序。"
+      - id: u5-cloze-6
+        bank: [印象, 口令, 行李]
+        text: "这件事虽然过去很久，我仍然____很深。"
+        answer: 印象
+        origin: original_practice
+        explanation: "记得清楚，就是印象深。"
+    choice_items:
+      - id: u5-choice-1
+        kind: judge
+        stem: "《麻雀》和《爬天都峰》都在四年级上册第5单元。"
+        answer: 对
+        origin: content_fact
+        explanation: "电子课本目录：第15课《麻雀》，第16课《爬天都峰》。"
+      - id: u5-choice-2
+        kind: judge
+        stem: "天都峰在黄山。"
+        answer: 对
+        origin: content_fact
+        explanation: "天都峰是黄山的山峰。"
+      - id: u5-choice-3
+        kind: judge
+        stem: "第5单元的习作题目是《生活万花筒》。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录中的习作是“生活万花筒”。"
+      - id: u5-choice-4
+        kind: judge
+        stem: "《爬天都峰》写的是登泰山。"
+        answer: 错
+        origin: content_fact
+        explanation: "写的是天都峰，不是泰山。"
+      - id: u5-choice-5
+        kind: single
+        stem: "第5单元的两篇课文是："
+        options: [麻雀、爬天都峰, 长城、颐和园, 牛和鹅、陀螺, 观潮、繁星]
+        answer: A
+        origin: content_fact
+        explanation: "第15、16课是《麻雀》和《爬天都峰》。"
+      - id: u5-choice-6
+        kind: single
+        stem: "把一件事写清楚，更合适的做法是："
+        options: [只写心情，不写经过, 按顺序写出看到的和做到的, 把几件事混在一段里, 只写标题]
+        answer: B
+        origin: original_practice
+        explanation: "按顺序写经过。"
+      - id: u5-choice-7
+        kind: judge
+        stem: "《我家的杏熟了》和《小木船》是第5单元习作后面的例文。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录在“生活万花筒”下列出这两篇例文。"
+      - id: u5-choice-8
+        kind: judge
+        stem: "第5单元没有单列语文园地。"
+        answer: 对
+        origin: content_fact
+        explanation: "电子课本目录里，第5单元在习作和例文后进入第6单元，没有单列语文园地。"
+    readings:
+      - id: u5-read
+        title: 楼道里的纸箱
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "星期二放学，楼道转角堆着一只纸箱，挡住了半边路。低年级的小朋友要从旁边挤过去。"
+          - "我看了看表，再晚就赶不上校车了。我本想绕开，可一个小同学的书包带挂在了纸箱上。"
+          - "我放下自己的书包，把纸箱挪到墙边，又把散出来的报纸塞回去。小同学说了声“谢谢”，跑下楼去。"
+          - "校车还在。我上车以后才发现手心有一块纸箱上的灰，可心里是热的。"
+        questions:
+          - id: u5-read-1
+            stem: "纸箱放在哪里？造成了什么不便？"
+            answer: "放在楼道转角，挡住了半边路。"
+            explanation: "照第一句回答即可。"
+          - id: u5-read-2
+            stem: "“我”为什么开始想绕开？"
+            answer: "再晚就赶不上校车了。"
+            explanation: "短文写再晚就赶不上校车。"
+          - id: u5-read-3
+            stem: "“我”做了哪两件事？"
+            answer: "把纸箱挪到墙边，把散出来的报纸塞回去。"
+            explanation: "写出这两件事即可。"
+          - id: u5-read-4
+            stem: "用一句话写出这件事的结果。"
+            answer: "路让开了，小同学下了楼，“我”也赶上了校车。"
+            explanation: "结果说完整即可。"
+    writing:
+      id: u5-write
+      title: 生活万花筒
+      prompt: "选一件你亲身经历、看到或听说的事，按一定的顺序把它写清楚。"
+      requirements:
+        - "题目自拟。"
+        - "写出事情的经过，至少有两个连续的动作或变化。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 6
+    title: 第6单元
+    note: "课文标题和习作题目据电子课本目录。不引用课文原文。"
+    lessons:
+      - title: 长城
+        author_status: todo
+        note: "介绍长城。教材署名本次未核对。"
+      - title: 颐和园
+        author_status: todo
+        note: "按游览顺序写颐和园。教材署名本次未核对。"
+      - title: 秦兵马俑
+        author_status: todo
+        note: "略读课文。教材署名本次未核对。"
+    words:
+      - word: 长城
+        source: lesson_title
+        detail: "课文标题《长城》"
+      - word: 颐和园
+        source: lesson_title
+        detail: "课文标题《颐和园》"
+      - word: 兵马俑
+        source: lesson_title
+        detail: "课文标题《秦兵马俑》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u6-cloze-1
+        bank: [悠久, 短暂, 偶然]
+        text: "长城的历史非常____，是中国的世界文化遗产。"
+        answer: 悠久
+        origin: content_fact
+        explanation: "长城历史很长。"
+      - id: u6-cloze-2
+        bank: [游览, 躲避, 浪费]
+        text: "作者带我们____颐和园，从长廊一直走到昆明湖。"
+        answer: 游览
+        origin: content_fact
+        explanation: "课文按游览顺序介绍颐和园。此处不引用原文。"
+      - id: u6-cloze-3
+        bank: [保存, 破坏, 遗忘]
+        text: "世界文化遗产需要人们好好____。"
+        answer: 保存
+        origin: original_practice
+        explanation: "保护并留存下来。"
+      - id: u6-cloze-4
+        bank: [介绍, 隐瞒, 责备]
+        text: "做小小讲解员，要用清楚的话把一处遗产____给大家。"
+        answer: 介绍
+        origin: original_practice
+        explanation: "讲解就是介绍。"
+      - id: u6-cloze-5
+        bank: [位置, 价钱, 心情]
+        text: "介绍一处建筑，可以先说它的____，再说它的样子。"
+        answer: 位置
+        origin: original_practice
+        explanation: "先说在哪里。"
+      - id: u6-cloze-6
+        bank: [壮丽, 微小, 寒冷]
+        text: "站在长城上向两边望，景色十分____。"
+        answer: 壮丽
+        origin: original_practice
+        explanation: "长城的景象用“壮丽”。"
+    choice_items:
+      - id: u6-choice-1
+        kind: judge
+        stem: "长城和颐和园都在四年级上册第6单元。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录：第17课《长城》，第18课《颐和园》。"
+      - id: u6-choice-2
+        kind: judge
+        stem: "《秦兵马俑》是第6单元的略读课文。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录标有星号。"
+      - id: u6-choice-3
+        kind: judge
+        stem: "第6单元的口语交际是“我是小小讲解员”。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录中的口语交际是“我是小小讲解员”。"
+      - id: u6-choice-4
+        kind: judge
+        stem: "第6单元的习作是《写信》。"
+        answer: 错
+        origin: content_fact
+        explanation: "第6单元习作是“中国的世界文化遗产”。《写信》在第8单元。"
+      - id: u6-choice-5
+        kind: single
+        stem: "下面哪一项是中国的世界文化遗产？"
+        options: [长城, 方帽子店, 天都峰的石级, 窗台上的豆苗]
+        answer: A
+        origin: content_fact
+        explanation: "长城是世界文化遗产。"
+      - id: u6-choice-6
+        kind: single
+        stem: "第6单元的习作题目是："
+        options: [中国的世界文化遗产, 生活万花筒, 我的心儿怦怦跳, 推荐一个好地方]
+        answer: A
+        origin: content_fact
+        explanation: "目录中的习作是“中国的世界文化遗产”。"
+      - id: u6-choice-7
+        kind: judge
+        stem: "颐和园在西安。"
+        answer: 错
+        origin: content_fact
+        explanation: "颐和园在北京。"
+      - id: u6-choice-8
+        kind: judge
+        stem: "秦兵马俑在陕西。"
+        answer: 对
+        origin: content_fact
+        explanation: "秦始皇兵马俑位于陕西西安临潼。"
+    readings:
+      - id: u6-read
+        title: 小小讲解员
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "学校要办世界文化遗产展览。林林抽到的题目是“长城”。他没有把整本书抄下来，而是先写下三张卡片。"
+          - "第一张写位置：长城在中国北方，跨过许多高山。第二张写样子：城墙又高又长，垛口一个连着一个。第三张写感受：站在城墙上，风很大，远处的山连成一条线。"
+          - "讲解那天，有同学问：“你为什么先说位置？”林林说：“听的人先知道它在哪里，再听它是什么样，才不容易乱。”"
+          - "三分钟讲完，老师在评价单上写：材料有顺序，介绍清楚。"
+        questions:
+          - id: u6-read-1
+            stem: "林林的三张卡片分别写了什么？"
+            answer: "位置、样子和感受。"
+            explanation: "按短文第二段回答即可。"
+          - id: u6-read-2
+            stem: "他为什么不把整本书抄下来？"
+            answer: "他选择了有用的材料，分成三张卡片来讲。"
+            explanation: "意思相近即可。"
+          - id: u6-read-3
+            stem: "林林说先讲位置有什么好处？"
+            answer: "听的人先知道它在哪里，再听它是什么样，不容易乱。"
+            explanation: "照林林的话回答即可。"
+          - id: u6-read-4
+            stem: "老师为什么说他介绍得清楚？"
+            answer: "因为材料有顺序。"
+            explanation: "评价单上写材料有顺序，介绍清楚。"
+    writing:
+      id: u6-write
+      title: 中国的世界文化遗产
+      prompt: "选一项中国的世界文化遗产，用收集到的材料向别人介绍它。不要整段抄资料，要按顺序说清楚。"
+      requirements:
+        - "题目里点明介绍的是哪一处。"
+        - "写出它在哪里、是什么样的，并说说你的了解或感受。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 7
+    title: 第7单元
+    note: "课文标题据电子课本目录。《王戎不取道旁李》只考故事里稳定的情节，不录课文原文。"
+    lessons:
+      - title: 牛和鹅
+        author_status: todo
+        note: "教材署名本次未核对，不出作者题。"
+      - title: 一只窝囊的大老虎
+        author_status: todo
+        note: "教材署名本次未核对。"
+      - title: 陀螺
+        author_status: todo
+        note: "略读课文。教材署名本次未核对。"
+      - title: 王戎不取道旁李
+        author: 刘义庆
+        author_status: todo
+        note: "故事见于《世说新语·雅量》。教材是否署刘义庆，本次页图未核对，故 author_status 仍为 todo。"
+    words:
+      - word: 窝囊
+        source: lesson_title
+        detail: "课文标题《一只窝囊的大老虎》"
+      - word: 陀螺
+        source: lesson_title
+        detail: "课文标题《陀螺》"
+      - word: 王戎
+        source: lesson_title
+        detail: "课文标题《王戎不取道旁李》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u7-cloze-1
+        bank: [害怕, 喜欢, 收集]
+        text: "他以前看见鹅就____，后来才知道鹅并没有那么可怕。"
+        answer: 害怕
+        origin: original_practice
+        explanation: "怕鹅，用“害怕”。"
+      - id: u7-cloze-2
+        bank: [改变, 隐藏, 抄写]
+        text: "看问题的角度一____，心情也会不一样。"
+        answer: 改变
+        origin: original_practice
+        explanation: "角度变了。"
+      - id: u7-cloze-3
+        bank: [紧张, 热闹, 宽阔]
+        text: "上台以前，我的心怦怦跳，手心都出了汗，真____。"
+        answer: 紧张
+        origin: original_practice
+        explanation: "心怦怦跳是紧张。"
+      - id: u7-cloze-4
+        bank: [安慰, 批评, 命令]
+        text: "同学演砸了，我没有笑他，而是轻轻____了他。"
+        answer: 安慰
+        origin: original_practice
+        explanation: "第7单元口语交际是“安慰”。"
+      - id: u7-cloze-5
+        bank: [苦, 甜, 香]
+        text: "路边的李子还挂在树上，没有人摘，王戎说这些李子一定是____的。"
+        answer: 苦
+        origin: content_fact
+        explanation: "道边李子没人摘，是因为味道不好。通行说法是李苦。"
+      - id: u7-cloze-6
+        bank: [感受, 价钱, 地址]
+        text: "把一件事写活，要写出自己当时的____。"
+        answer: 感受
+        origin: original_practice
+        explanation: "第7单元习作要写出感受。题干是自编的。"
+    choice_items:
+      - id: u7-choice-1
+        kind: judge
+        stem: "《王戎不取道旁李》在四年级上册第7单元。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录第23课。"
+      - id: u7-choice-2
+        kind: judge
+        stem: "王戎不摘路边的李子，是因为李子还没有熟。"
+        answer: 错
+        origin: content_fact
+        explanation: "他根据“树在道边而多子，没人摘”判断李子味道不好。"
+      - id: u7-choice-3
+        kind: judge
+        stem: "第7单元的口语交际是“安慰”。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录中的口语交际是“安慰”。"
+      - id: u7-choice-4
+        kind: judge
+        stem: "第7单元的习作题目是《我的心儿怦怦跳》。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录中的习作是“我的心儿怦怦跳”。"
+      - id: u7-choice-5
+        kind: single
+        stem: "《陀螺》在目录中是："
+        options: [略读课文, 古诗, 习作例文, 口语交际]
+        answer: A
+        origin: content_fact
+        explanation: "目录标有星号，是略读课文。"
+      - id: u7-choice-6
+        kind: single
+        stem: "王戎判断李子不好吃，依据是："
+        options: [李树在路边却没人摘, 李子是绿色的, 同伴都说很甜, 他已经尝过一个]
+        answer: A
+        origin: content_fact
+        explanation: "树在道边，果实还在，说明过路人不愿摘。"
+      - id: u7-choice-7
+        kind: judge
+        stem: "《一只窝囊的大老虎》在第8单元。"
+        answer: 错
+        origin: content_fact
+        explanation: "它是第7单元第21课。"
+      - id: u7-choice-8
+        kind: single
+        stem: "第7单元的四篇课文是："
+        options: [牛和鹅、一只窝囊的大老虎、陀螺、王戎不取道旁李, 长城、颐和园、秦兵马俑、写信, 麻雀、爬天都峰、观潮、繁星, 盘古开天地、精卫填海、普罗米修斯、女娲补天]
+        answer: A
+        origin: content_fact
+        explanation: "第20至23课。"
+    readings:
+      - id: u7-read
+        title: 上台以前
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "联欢会要开始了。我扮演一棵树，只要站直，再把胳膊伸开。可我越等越慌，台词在嘴里转了三圈，还是没记住。"
+          - "同桌小周看见我的手在抖，把自己的水杯递过来，说：“你刚才在教室里做得很好。忘了词，就先站好，我在旁边给你提一句。”"
+          - "灯光亮起来的时候，我还是忘了一句。小周轻轻说了两个字，我才接下去。台下有人笑，我的脸热得发烫，可我没有跑下去。"
+          - "回到座位上，心还在跳。小周说：“跳就跳吧，你到底把节目演完了。”"
+        questions:
+          - id: u7-read-1
+            stem: "“我”在联欢会上扮演什么？心里怎样？"
+            answer: "扮演一棵树，心里很慌。"
+            explanation: "写出角色和心情即可。"
+          - id: u7-read-2
+            stem: "小周是怎样安慰“我”的？"
+            answer: "把水杯递给“我”，并说忘了词就先站好，他会在旁边提一句。"
+            explanation: "写出递水杯和答应提词即可。"
+          - id: u7-read-3
+            stem: "上台以后发生了什么？"
+            answer: "“我”忘了一句词，小周提了两个字，“我”才接下去。"
+            explanation: "照第三段回答即可。"
+          - id: u7-read-4
+            stem: "短文哪一处写出了“心儿怦怦跳”？请用自己的话说。"
+            answer: "上台前手在抖，回到座位上心还在跳。"
+            explanation: "指出紧张的表现即可。"
+    writing:
+      id: u7-write
+      title: 我的心儿怦怦跳
+      prompt: "写一件让你心里怦怦跳的事。要把事情写清楚，还要写出当时的感受。"
+      requirements:
+        - "题目自拟。"
+        - "写出事情的经过和自己的心情。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 8
+    title: 第8单元
+    note: "课文标题和三首诗题据电子课本目录。《夏日绝句》的作者和后两句已在课本页上看到。另两首按统编通行文本录入。"
+    lessons:
+      - title: 我将无我，不负人民
+        author_status: todo
+        note: "教材署名本次未逐页核对。"
+      - title: 为中华之崛起而读书
+        author_status: todo
+        note: "课文写周恩来少年立志。教材署名本次未逐页核对，不出作者判断题。"
+      - title: 延安，我把你追寻
+        author_status: todo
+        note: "略读课文。教材署名本次未核对。"
+      - title: 古诗三首
+        author: 王翰、王昌龄、李清照
+        author_status: verified
+        pieces: [凉州词, 出塞, 夏日绝句]
+        note: "《夏日绝句》页上署〔宋〕李清照。王翰、王昌龄是这两首诗的通行作者。"
+    words:
+      - word: 崛起
+        source: lesson_title
+        detail: "课文标题《为中华之崛起而读书》"
+      - word: 延安
+        source: lesson_title
+        detail: "课文标题《延安，我把你追寻》"
+    textbook_words: []
+    poems:
+      - title: 凉州词
+        dynasty: 唐
+        author: 王翰
+        lines:
+          - 葡萄美酒夜光杯
+          - 欲饮琵琶马上催
+          - 醉卧沙场君莫笑
+          - 古来征战几人回
+        glosses:
+          - term: 催
+            meaning: "催人出发"
+        teacher_note: "诗题已在2026秋新版目录核对。四句按统编通行文本，本次页图没有把四句逐字重读。"
+        words:
+          - word: 琵琶
+            source: poem
+            detail: "《凉州词》原文"
+          - word: 沙场
+            source: poem
+            detail: "《凉州词》原文"
+      - title: 出塞
+        dynasty: 唐
+        author: 王昌龄
+        lines:
+          - 秦时明月汉时关
+          - 万里长征人未还
+          - 但使龙城飞将在
+          - 不教胡马度阴山
+        glosses:
+          - term: 飞将
+            meaning: "汉代名将李广"
+          - term: 度
+            meaning: "越过"
+        teacher_note: "诗题已在目录核对。正文用统编通行的“龙城”。有的本子作“卢城”，本次页图未逐字核对。"
+        words:
+          - word: 阴山
+            source: poem
+            detail: "《出塞》原文"
+          - word: 飞将
+            source: poem
+            detail: "《出塞》原文"
+      - title: 夏日绝句
+        dynasty: 宋
+        author: 李清照
+        lines:
+          - 生当作人杰
+          - 死亦为鬼雄
+          - 至今思项羽
+          - 不肯过江东
+        glosses:
+          - term: 人杰
+            meaning: "人中的豪杰"
+          - term: 鬼雄
+            meaning: "鬼中的英雄"
+          - term: 江东
+            meaning: "长江下游南岸一带。项羽觉得无颜见江东父老，不肯渡江。"
+        teacher_note: "课本页署〔宋〕李清照，并印有“至今思项羽，不肯过江东”。"
+        words:
+          - word: 人杰
+            source: poem
+            detail: "《夏日绝句》原文"
+          - word: 鬼雄
+            source: poem
+            detail: "《夏日绝句》原文"
+    cloze_items:
+      - id: u8-cloze-1
+        bank: [志向, 玩具, 天气]
+        text: "少年周恩来立下的____是：为中华之崛起而读书。"
+        answer: 志向
+        origin: content_fact
+        explanation: "课文写他立下这个志向。题干不引用课文段落。"
+      - id: u8-cloze-2
+        bank: [格式, 口号, 价钱]
+        text: "写信要有称呼、正文、祝福语和署名，这是书信的____。"
+        answer: 格式
+        origin: original_practice
+        explanation: "第8单元习作是写信。"
+      - id: u8-cloze-3
+        bank: [追寻, 躲避, 浪费]
+        text: "题目里的“追寻”，是一心要____的意思。"
+        answer: 追寻
+        origin: original_practice
+        explanation: "解释题目中的词，不引用正文。"
+      - id: u8-cloze-4
+        bank: [豪迈, 胆小, 糊涂]
+        text: "《夏日绝句》的语气很____，赞美不肯苟活的人。"
+        answer: 豪迈
+        origin: content_fact
+        explanation: "生当作人杰、死亦为鬼雄，语气豪迈。"
+      - id: u8-cloze-5
+        bank: [祝福, 责备, 广告]
+        text: "一封信的末尾，通常要写上____的话，再署名。"
+        answer: 祝福
+        origin: original_practice
+        explanation: "书信末尾的问候。"
+      - id: u8-cloze-6
+        bank: [责任, 借口, 玩具]
+        text: "“天下兴亡，匹夫有责”提醒我们，国家的事也有自己的一份____。"
+        answer: 责任
+        origin: content_fact
+        explanation: "只考这句的意思。"
+    choice_items:
+      - id: u8-choice-1
+        kind: judge
+        stem: "《夏日绝句》的作者是宋代李清照。"
+        answer: 对
+        origin: content_fact
+        explanation: "课本页署〔宋〕李清照。"
+      - id: u8-choice-2
+        kind: judge
+        stem: "第8单元的习作是《写信》。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录中的习作是“写信”。"
+      - id: u8-choice-3
+        kind: judge
+        stem: "《凉州词》《出塞》《夏日绝句》都在第27课。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录第27课古诗三首下列出这三首。"
+      - id: u8-choice-4
+        kind: judge
+        stem: "《出塞》的作者是李白。"
+        answer: 错
+        origin: content_fact
+        explanation: "《出塞》的作者是王昌龄。"
+      - id: u8-choice-5
+        kind: single
+        stem: "《凉州词》（葡萄美酒夜光杯）的作者是："
+        options: [王翰, 王昌龄, 李清照, 苏轼]
+        answer: A
+        origin: content_fact
+        explanation: "这首《凉州词》的作者是王翰。"
+      - id: u8-choice-6
+        kind: single
+        stem: "《夏日绝句》中不肯过江东的人是："
+        options: [项羽, 李白, 苏轼, 王昌龄]
+        answer: A
+        origin: content_fact
+        explanation: "诗中写至今思项羽，不肯过江东。"
+      - id: u8-choice-7
+        kind: judge
+        stem: "《延安，我把你追寻》是略读课文。"
+        answer: 对
+        origin: content_fact
+        explanation: "目录标有星号。"
+      - id: u8-choice-8
+        kind: single
+        stem: "第8单元最后一课是："
+        options: [古诗三首, 观潮, 长城, 麻雀]
+        answer: A
+        origin: content_fact
+        explanation: "第27课是古诗三首。"
+    readings:
+      - id: u8-read
+        title: 一封没寄出的信
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "奶奶的生日在下个星期天。我想打电话，又觉得电话里说不了几句。爸爸建议我写一封信。"
+          - "我先写“亲爱的奶奶”，再写上个暑假她教我摘豆角的事，还写了我想对她说的谢谢。最后写“祝您身体健康”，签上自己的名字和日期。"
+          - "写完我读了一遍，发现把日期写成了今年六月。爸爸说：“日期要写今天，不然奶奶会以为信在路上走了很久。”"
+          - "我改好日期，把信放进信封。虽然后来我们还是一起去看了奶奶，这封信我还是交到了她手里。"
+        questions:
+          - id: u8-read-1
+            stem: "“我”为什么要写信，而不只是打电话？"
+            answer: "觉得电话里说不了几句，想把心里的话写下来。"
+            explanation: "意思相近即可。"
+          - id: u8-read-2
+            stem: "这封信里有哪些书信该有的部分？请写出三处。"
+            answer: "称呼“亲爱的奶奶”、祝福语“祝您身体健康”、署名和日期。"
+            explanation: "写出其中三处即可。"
+          - id: u8-read-3
+            stem: "爸爸让“我”改什么？为什么？"
+            answer: "改日期。日期要写今天，不然奶奶会以为信在路上走了很久。"
+            explanation: "照短文回答即可。"
+          - id: u8-read-4
+            stem: "信改好以后，“我”是怎样交给奶奶的？"
+            answer: "后来一起去看奶奶时，把信交到了她手里。"
+            explanation: "最后一节。"
+    writing:
+      id: u8-write
+      title: 写信
+      prompt: "给一位亲人、老师或朋友写一封信，把你想说的事写清楚。"
+      requirements:
+        - "要有称呼、正文、祝福语、署名和日期。"
+        - "正文写一件具体的事，或一个真实的想法。"
+        - "格式正确，语句通顺。"
       origin: original_practice
       word_count: 300

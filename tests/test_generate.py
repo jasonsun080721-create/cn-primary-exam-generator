@@ -30,9 +30,13 @@ def test_parse_unit_spec() -> None:
         {"unit": 2},
         {"unit": 3},
         {"unit": 4},
+        {"unit": 5},
+        {"unit": 6},
+        {"unit": 7},
+        {"unit": 8},
         {"exam": "midterm"},
         {"exam": "final"},
-        {"units": "1-2"},
+        {"units": "1-8"},
     ],
 )
 def test_scopes_score_one_hundred(tmp_path: Path, kwargs: dict) -> None:
@@ -77,7 +81,11 @@ def test_unit1_has_header_and_no_classical(tmp_path: Path) -> None:
     assert "繁星" in text
     section_ids = [section.id for section in result.paper.sections]
     assert "classical" not in section_ids
-    assert "pinyin" not in section_ids
+    assert "pinyin" in section_ids
+    assert "秋晚的江上" in text
+    pinyin = next(section for section in result.paper.sections if section.id == "pinyin")
+    for question in pinyin.questions:
+        assert question.answer not in text
     assert "cloze" in section_ids
     assert "choice" in section_ids
     assert "reading" in section_ids
@@ -175,10 +183,16 @@ def test_midterm_does_not_use_later_units(tmp_path: Path) -> None:
         output_dir=tmp_path,
         export_pdf_files=False,
     )
+    detail = result.paper.meta.scope_detail
+    assert "观潮" in detail
+    assert "盘古开天地" in detail
+    assert "女娲补天" in detail
+    assert "长城" not in detail
+    assert "凉州词" not in detail
     answer = docx_text(result.answer_docx)
-    assert "女娲" not in answer
-    assert "盘古" not in answer
-    assert "安徒生" in answer or "孙膑" in answer
+    assert "凉州词" not in answer
+    assert "李清照" not in answer
+    assert "答案：" in answer
 
 
 def _answers(result) -> list[str]:
