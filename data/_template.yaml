@@ -1,0 +1,89 @@
+# 复制到 data/<版本编号>/grade<年级>_term<学期>.yaml 后修改。
+# 目录名必须与 edition.id 相同。不要编造写字表，不要粘贴仍受著作权保护的课文原文。
+
+schema_version: 1
+
+edition:
+  id: example
+  name: 示例版本
+  series_label: 请改成教材版本说明
+  grade: 4
+  term: 1
+  book_name: 四年级上册
+
+paper_note: "请写明哪些内容已核对、哪些仍是待补。"
+unit_duration_minutes: 60
+
+todos:
+  - "录入写字表。"
+
+exam_ranges:
+  midterm:
+    label: 期中
+    units: [1]
+    duration_minutes: 90
+    writing:
+      id: midterm-write
+      title: 期中习作
+      prompt: "请把习作要求写清楚。"
+      requirements:
+        - "题目自拟。"
+      origin: original_practice
+      word_count: 300
+  final:
+    label: 期末
+    units: [1]
+    duration_minutes: 90
+    writing:
+      id: final-write
+      title: 期末习作
+      prompt: "请把习作要求写清楚。"
+      requirements:
+        - "题目自拟。"
+      origin: original_practice
+      word_count: 400
+
+units:
+  - number: 1
+    title: 第1单元
+    lessons:
+      - title: 示例课文
+        author_status: todo
+        note: "TODO: 核对课文标题与作者。"
+    words: []
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: ex-cloze-1
+        bank: [安静, 热闹]
+        text: "夜里院子里很____。"
+        answer: 安静
+        origin: original_practice
+        explanation: "TODO: 换成真实练习。"
+    choice_items:
+      - id: ex-choice-1
+        kind: judge
+        stem: "示例判断题。"
+        answer: 对
+        origin: original_practice
+        explanation: "TODO"
+    readings:
+      - id: ex-read
+        title: 示例短文
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "TODO: 写一段自编短文，不要粘贴课文原文。"
+        questions:
+          - id: ex-read-1
+            stem: "TODO: 提出问题。"
+            answer: "TODO: 写出答案。"
+            explanation: "意思相近即可。"
+    writing:
+      id: ex-write
+      title: 示例习作
+      prompt: "TODO: 写习作要求。"
+      requirements:
+        - "题目自拟。"
+      origin: original_practice
+      word_count: 300

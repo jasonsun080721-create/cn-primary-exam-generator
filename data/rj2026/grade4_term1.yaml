@@ -1,0 +1,806 @@
+# 人教版（统编版）2026秋新版 四年级上册 · 起步题库
+# 只收录已核对的课文标题、文学常识和古诗原文。
+# 写字表、词语表、官方习作题目未逐页核对，不要在 textbook_words 里编造。
+# 不要粘贴仍受著作权保护的现代课文原文；阅读短文须自编或使用公有领域文本。
+
+schema_version: 1
+
+edition:
+  id: rj2026
+  name: 人教版（统编版）
+  series_label: 2026秋新版
+  grade: 4
+  term: 1
+  book_name: 四年级上册
+
+paper_note: "古诗按统编教材通行文本录入。写字表、词语表和官方习作题目尚未收录；除已核对的文学常识、课文标题和古诗外，题目为自编练习。"
+
+unit_duration_minutes: 60
+
+todos:
+  - "对照 2026 秋新版纸质课本录入各课写字表、词语表，写入 textbook_words，source 用 textbook。"
+  - "核对《现代诗二首》的具体篇目后再著录诗题，不要沿用旧版猜测。"
+  - "核对各单元口语交际、官方习作题目和语文园地，替换自编习作。"
+  - "第 5–8 单元尚未收录。"
+  - "《观潮》《夜间飞行的秘密》《方帽子店》及神话课文的教材署名未逐页核对。"
+
+exam_ranges:
+  midterm:
+    label: 期中
+    units: [1, 2]
+    duration_minutes: 90
+    note: "起步数据把期中暂定为第 1–2 单元，请按学校实际进度修改。"
+    writing:
+      id: midterm-write
+      title: 一件我记得清楚的事
+      prompt: "第 1、2 单元里，哪篇课文让你想起自己的生活？联系课文，写一件真实的事，把经过写清楚。"
+      requirements:
+        - "题目自拟。"
+        - "写出事情的起因、经过和结果。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 400
+  final:
+    label: 期末
+    units: [1, 2, 3, 4]
+    duration_minutes: 90
+    note: "起步数据只收录第 1–4 单元，期末卷目前只覆盖这些单元。"
+    writing:
+      id: final-write
+      title: 读课文以后
+      prompt: "从本学期已学课文里选一个人物或一处景物，写下你的观察，或写下读后想到的一件事。"
+      requirements:
+        - "题目自拟，点明人物或景物。"
+        - "内容具体，顺序清楚。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 400
+
+units:
+  - number: 1
+    title: 第1单元
+    note: "课文标题按项目给定的 2026 秋新版目录收录。"
+    lessons:
+      - title: 观潮
+        author_status: todo
+        note: "课文写钱塘江大潮。2026 秋新版署名未逐页核对，不出作者题。"
+      - title: 繁星
+        author: 巴金
+        author_status: verified
+        note: "巴金散文。此处不收录原文。"
+      - title: 现代诗二首
+        author_status: todo
+        note: "具体篇目未对照 2026 秋纸质课本，不著录诗题，也不出默写。"
+    words:
+      - word: 观潮
+        source: lesson_title
+        detail: "课文标题《观潮》"
+      - word: 繁星
+        source: lesson_title
+        detail: "课文标题《繁星》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u1-cloze-1
+        bank: [渐渐, 突然, 从来]
+        text: "太阳____落到江面附近，天色暗了下来。"
+        answer: 渐渐
+        origin: original_practice
+        explanation: "“渐渐”表示缓慢变化。"
+      - id: u1-cloze-2
+        bank: [安静, 热闹, 危险]
+        text: "潮水过去以后，江边又____了，只听见轻轻的水声。"
+        answer: 安静
+        origin: original_practice
+        explanation: "后文只有轻轻的水声，所以用“安静”。"
+      - id: u1-cloze-3
+        bank: [仔细, 马虎, 偷偷]
+        text: "爷爷让我____看，先看见什么，后看见什么。"
+        answer: 仔细
+        origin: original_practice
+        explanation: "观察要按顺序看清楚。"
+      - id: u1-cloze-4
+        bank: [推荐, 批评, 隐藏]
+        text: "我想把这处能看晚霞的江边____给同学。"
+        answer: 推荐
+        origin: original_practice
+        explanation: "向别人介绍好地方，用“推荐”。"
+      - id: u1-cloze-5
+        bank: [印象, 口令, 行李]
+        text: "那道白色的浪线给我留下了很深的____。"
+        answer: 印象
+        origin: original_practice
+        explanation: "记得清楚，就是留下印象。"
+      - id: u1-cloze-6
+        bank: [连续, 中断, 放弃]
+        text: "我____观察了三个傍晚，才把江水的变化说清楚。"
+        answer: 连续
+        origin: original_practice
+        explanation: "三个傍晚接连观察，用“连续”。"
+    choice_items:
+      - id: u1-choice-1
+        kind: judge
+        stem: "《繁星》的作者是巴金。"
+        answer: 对
+        origin: content_fact
+        explanation: "《繁星》是巴金的散文。"
+      - id: u1-choice-2
+        kind: judge
+        stem: "《观潮》写的是钱塘江大潮。"
+        answer: 对
+        origin: content_fact
+        explanation: "课文《观潮》写的是钱塘江大潮。"
+      - id: u1-choice-3
+        kind: judge
+        stem: "《繁星》的作者是鲁迅。"
+        answer: 错
+        origin: content_fact
+        explanation: "作者是巴金，不是鲁迅。"
+      - id: u1-choice-4
+        kind: judge
+        stem: "《观潮》主要写的是沙漠里的风沙。"
+        answer: 错
+        origin: content_fact
+        explanation: "写的是钱塘江大潮，不是沙漠风沙。"
+      - id: u1-choice-5
+        kind: judge
+        stem: "《繁星》和《现代诗二首》都是古诗。"
+        answer: 错
+        origin: content_fact
+        explanation: "《繁星》是散文；《现代诗二首》是现代诗，不是古诗。"
+      - id: u1-choice-6
+        kind: single
+        stem: "《繁星》的作者是："
+        options: [鲁迅, 巴金, 老舍, 朱自清]
+        answer: B
+        origin: content_fact
+        explanation: "作者是巴金。"
+      - id: u1-choice-7
+        kind: single
+        stem: "《观潮》写的景象是："
+        options: [钱塘江大潮, 黄河壶口瀑布, 庐山云雾, 海边日出]
+        answer: A
+        origin: content_fact
+        explanation: "写的是钱塘江大潮。"
+      - id: u1-choice-8
+        kind: single
+        stem: "阅读写景文章时，下面哪种做法更合适？"
+        options: [只抄优美的词, 按顺序说出看到和听到的, 跳过不认识的景物, 只看标题]
+        answer: B
+        origin: original_practice
+        explanation: "按顺序说看到的和听到的，观察才清楚。"
+    readings:
+      - id: u1-read
+        title: 江边的傍晚
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "爷爷牵着我走到江边。太阳快落下去了，江面一半还亮着，一半已经暗了。远处先传来低低的声音，像很多人在远远的地方说话。"
+          - "“别急，看仔细。”爷爷说。"
+          - "声音越来越近，一道白线慢慢推过来。江水被它挤得鼓起来，浪头拍到岸上，溅湿了我的裤脚。我抓紧爷爷的手，又害怕又想笑。白线过去以后，江水还在轻轻地晃，声音小了，天空里露出几颗细细的星。"
+          - "爷爷问：“你刚才先看见什么，后看见什么？”我按顺序说：先是江边的光，再是远处的声音，然后是那道白线，最后是星星。"
+        questions:
+          - id: u1-read-1
+            stem: "短文里的“我”是和谁一起到江边的？"
+            answer: "爷爷。"
+            explanation: "开头写爷爷牵着“我”。"
+          - id: u1-read-2
+            stem: "那道白线过来的时候，“我”有什么表现？"
+            answer: "抓紧爷爷的手，又害怕又想笑。"
+            explanation: "意思相近即可。"
+          - id: u1-read-3
+            stem: "白线过去以后，天空有什么变化？"
+            answer: "露出几颗细细的星。"
+            explanation: "照短文回答即可。"
+          - id: u1-read-4
+            stem: "请用“先……再……然后……最后……”说一说“我”观察到的顺序。"
+            answer: "先是江边的光，再是远处的声音，然后是那道白线，最后是星星。"
+            explanation: "顺序与短文最后一节一致即可。"
+    writing:
+      id: u1-write
+      title: 写一处自然景象
+      prompt: "你观察过潮水、星空、晚霞或一场雨吗？选一处印象最深的自然景象写下来。"
+      requirements:
+        - "题目自拟。"
+        - "按一定顺序写，把看到的、听到的写清楚。"
+        - "语句通顺，正确使用标点。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 2
+    title: 第2单元
+    note: "《夜间飞行的秘密》《方帽子店》的教材正文未核对，不出情节题。"
+    lessons:
+      - title: 一个豆荚里的五粒豆
+        author: 安徒生
+        author_status: verified
+        note: "安徒生童话。此处不收录课文译文。"
+      - title: 夜间飞行的秘密
+        author_status: todo
+        note: "正文与署名未核对，不出内容题。"
+      - title: 方帽子店
+        author_status: todo
+        note: "正文与署名未核对，不出情节题。"
+      - title: 田忌赛马
+        author_status: todo
+        note: "故事见于《史记·孙子吴起列传》。教材改编文字不收录。出题只考孙膑的安排和二比一的结果。"
+    words:
+      - word: 豆荚
+        source: lesson_title
+        detail: "课文标题《一个豆荚里的五粒豆》"
+      - word: 夜间
+        source: lesson_title
+        detail: "课文标题《夜间飞行的秘密》"
+      - word: 飞行
+        source: lesson_title
+        detail: "课文标题《夜间飞行的秘密》"
+      - word: 秘密
+        source: lesson_title
+        detail: "课文标题《夜间飞行的秘密》"
+      - word: 帽子
+        source: lesson_title
+        detail: "课文标题《方帽子店》"
+      - word: 田忌
+        source: lesson_title
+        detail: "课文标题《田忌赛马》"
+      - word: 赛马
+        source: lesson_title
+        detail: "课文标题《田忌赛马》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u2-cloze-1
+        bank: [办法, 借口, 玩具]
+        text: "只靠力气不够，还要先想好____。"
+        answer: 办法
+        origin: original_practice
+        explanation: "先想方法。"
+      - id: u2-cloze-2
+        bank: [顺序, 脾气, 名字]
+        text: "换一换上场的____，结果可能不一样。"
+        answer: 顺序
+        origin: original_practice
+        explanation: "调整先后次序。"
+      - id: u2-cloze-3
+        bank: [对手, 观众, 裁判]
+        text: "比赛以前，要先看清楚____有多强。"
+        answer: 对手
+        origin: original_practice
+        explanation: "了解对方再安排自己的力量。"
+      - id: u2-cloze-4
+        bank: [全部, 一场, 没有]
+        text: "他并没有____获胜，而是输了一场、赢了两场。"
+        answer: 全部
+        origin: original_practice
+        explanation: "“并没有全部获胜”与后文一致。"
+      - id: u2-cloze-5
+        bank: [故事, 通知, 账单]
+        text: "这个____告诉我：想办法，有时比只拼力气更重要。"
+        answer: 故事
+        origin: original_practice
+        explanation: "指读到的故事。"
+      - id: u2-cloze-6
+        bank: [安排, 放弃, 隐藏]
+        text: "孙膑帮助田忌____了三场比赛的马。"
+        answer: 安排
+        origin: content_fact
+        explanation: "孙膑安排的是马的对阵顺序。"
+    choice_items:
+      - id: u2-choice-1
+        kind: judge
+        stem: "《一个豆荚里的五粒豆》的作者是安徒生。"
+        answer: 对
+        origin: content_fact
+        explanation: "这是安徒生的童话。"
+      - id: u2-choice-2
+        kind: judge
+        stem: "《田忌赛马》里，给田忌出主意的是孙膑。"
+        answer: 对
+        origin: content_fact
+        explanation: "孙膑提出调换马的对阵顺序。"
+      - id: u2-choice-3
+        kind: judge
+        stem: "按孙膑的办法，田忌第一场用下等马对齐威王的上等马。"
+        answer: 对
+        origin: content_fact
+        explanation: "先用自己的下等马对国王的上等马，这一场会输。"
+      - id: u2-choice-4
+        kind: judge
+        stem: "田忌三场比赛全部获胜。"
+        answer: 错
+        origin: content_fact
+        explanation: "第一场输，后两场赢，结果是二比一。"
+      - id: u2-choice-5
+        kind: judge
+        stem: "《一个豆荚里的五粒豆》的作者是格林兄弟。"
+        answer: 错
+        origin: content_fact
+        explanation: "作者是安徒生，不是格林兄弟。"
+      - id: u2-choice-6
+        kind: single
+        stem: "《田忌赛马》中出主意的人是："
+        options: [齐威王, 孙膑, 安徒生, 田忌的马夫]
+        answer: B
+        origin: content_fact
+        explanation: "出主意的是孙膑。"
+      - id: u2-choice-7
+        kind: single
+        stem: "孙膑安排的三场比赛，结果是："
+        options: [三场全胜, 三场全败, 输一场、赢两场, 只比了一场]
+        answer: C
+        origin: content_fact
+        explanation: "下等马对上等马先输一场，再赢后两场。"
+      - id: u2-choice-8
+        kind: single
+        stem: "《一个豆荚里的五粒豆》的作者是："
+        options: [安徒生, 格林兄弟, 叶圣陶, 巴金]
+        answer: A
+        origin: content_fact
+        explanation: "作者是安徒生。"
+    readings:
+      - id: u2-read
+        title: 换一换顺序
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "体育课上，四年级有甲、乙、丙三支小队，甲队最有劲，乙队中等，丙队力气小一些。三年级也有强、中、弱三支小队。"
+          - "四年级先派出甲队，对三年级最强的队。两边拉了很久，绳子几乎不动。小队长林林说：“照这样比，我们未必能赢两场。”"
+          - "周周在纸上画了三个圈，说：“让丙队先去对他们最强的队；甲队对他们中等的队；乙队对他们最弱的队。”"
+          - "老师同意试一次。第一场四年级输了。后两场，绳子慢慢移向四年级这边。林林这才明白：周周不是让大家使蛮劲，而是先看清楚对手，再安排自己的力量。"
+        questions:
+          - id: u2-read-1
+            stem: "周周是怎样安排三场比赛的？"
+            answer: "用最弱的队对对方最强的队，用最强的队对对方中等的队，用中等的队对对方最弱的队。"
+            explanation: "写出这三组对阵即可。"
+          - id: u2-read-2
+            stem: "按周周的办法，第一场的结果是什么？"
+            answer: "四年级输了。"
+            explanation: "短文写第一场四年级输了。"
+          - id: u2-read-3
+            stem: "林林明白了什么道理？"
+            answer: "要先看清楚对手，再安排自己的力量。"
+            explanation: "意思相近即可。"
+          - id: u2-read-4
+            stem: "短文中的“蛮劲”是什么意思？用自己的话说。"
+            answer: "只靠力气，不讲方法。"
+            explanation: "意思相近即可。"
+    writing:
+      id: u2-write
+      title: 一个想了办法的人
+      prompt: "写一个小故事。故事里的人物遇到一件难事，想出一个办法，并把事情做完。"
+      requirements:
+        - "题目自拟。"
+        - "写出人物怎么想、怎么做。"
+        - "有开头、经过和结果。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 3
+    title: 第3单元
+    note: "三首七言绝句按统编教材通行文本录入，不带标点。"
+    lessons:
+      - title: 古诗三首
+        author_status: verified
+        author: 白居易、苏轼、卢钺
+        note: "各诗作者见 poems。此处的 author 只说明三首诗都已核对署名。"
+        pieces: [暮江吟, 题西林壁, 雪梅]
+      - title: 爬山虎的脚
+        author: 叶圣陶
+        author_status: verified
+        note: "叶圣陶散文。此处不收录原文。"
+      - title: 蟋蟀的住宅
+        author: 法布尔
+        author_status: verified
+        note: "与法布尔《昆虫记》中的观察有关。中文课文为翻译或改编，此处不收录译文。"
+    words:
+      - word: 爬山虎
+        source: lesson_title
+        detail: "课文标题《爬山虎的脚》"
+      - word: 蟋蟀
+        source: lesson_title
+        detail: "课文标题《蟋蟀的住宅》"
+      - word: 住宅
+        source: lesson_title
+        detail: "课文标题《蟋蟀的住宅》"
+    textbook_words: []
+    poems:
+      - title: 暮江吟
+        dynasty: 唐
+        author: 白居易
+        lines:
+          - 一道残阳铺水中
+          - 半江瑟瑟半江红
+          - 可怜九月初三夜
+          - 露似真珠月似弓
+        glosses:
+          - term: 瑟瑟
+            meaning: "诗中形容未受到残阳照射的江水呈青绿色"
+          - term: 可怜
+            meaning: "可爱"
+          - term: 真珠
+            meaning: "珍珠。统编教材用“真珠”，写作“珍珠”可在评分时酌情给分"
+        teacher_note: "“真珠”即珍珠，答题以课文用字“真珠”为准。"
+        words:
+          - word: 残阳
+            source: poem
+            detail: "《暮江吟》原文"
+          - word: 瑟瑟
+            source: poem
+            detail: "《暮江吟》原文"
+          - word: 真珠
+            source: poem
+            detail: "《暮江吟》原文，即珍珠"
+      - title: 题西林壁
+        dynasty: 宋
+        author: 苏轼
+        lines:
+          - 横看成岭侧成峰
+          - 远近高低各不同
+          - 不识庐山真面目
+          - 只缘身在此山中
+        glosses:
+          - term: 缘
+            meaning: "因为"
+          - term: 真面目
+            meaning: "事物真正的样子"
+        teacher_note: "后两句讲观察角度不同，看到的样子就不同。"
+        words:
+          - word: 庐山
+            source: poem
+            detail: "《题西林壁》原文"
+          - word: 真面目
+            source: poem
+            detail: "《题西林壁》原文"
+      - title: 雪梅
+        dynasty: 宋
+        author: 卢钺
+        lines:
+          - 梅雪争春未肯降
+          - 骚人阁笔费评章
+          - 梅须逊雪三分白
+          - 雪却输梅一段香
+        glosses:
+          - term: 降
+            meaning: "服输，这里读 xiáng"
+          - term: 骚人
+            meaning: "诗人"
+          - term: 阁
+            meaning: "同“搁”，放下，这里读 gē"
+          - term: 评章
+            meaning: "评议高下"
+          - term: 逊
+            meaning: "比不上"
+        teacher_note: "统编教材署名为宋·卢钺。有的选集把同题诗系于卢梅坡名下，本卷与统编教材一致，诗句不改。"
+        words:
+          - word: 争春
+            source: poem
+            detail: "《雪梅》原文"
+          - word: 评章
+            source: poem
+            detail: "《雪梅》原文"
+    cloze_items:
+      - id: u3-cloze-1
+        bank: [连续, 偶然, 马虎]
+        text: "观察一种植物，最好____看几天，把变化记下来。"
+        answer: 连续
+        origin: original_practice
+        explanation: "连续观察才能看见变化。"
+      - id: u3-cloze-2
+        bank: [标记, 借口, 谣言]
+        text: "我在杯壁外做了____，才知道水面有没有下降。"
+        answer: 标记
+        origin: original_practice
+        explanation: "做标记才能比较。"
+      - id: u3-cloze-3
+        bank: [角度, 脾气, 价格]
+        text: "换一个____再看，事物的样子可能不同。"
+        answer: 角度
+        origin: original_practice
+        explanation: "与《题西林壁》的道理一致，但不是诗句。"
+      - id: u3-cloze-4
+        bank: [比较, 争吵, 抄写]
+        text: "把两种事物放在一起____，各自的长处更容易看出来。"
+        answer: 比较
+        origin: original_practice
+        explanation: "对比着看。"
+      - id: u3-cloze-5
+        bank: [记录, 命令, 广告]
+        text: "当天看到的变化，要及时写进观察____。"
+        answer: 记录
+        origin: original_practice
+        explanation: "观察记录。"
+      - id: u3-cloze-6
+        bank: [细致, 粗糙, 慌张]
+        text: "叶圣陶写爬山虎，用词很____，把叶子的变化写清楚了。"
+        answer: 细致
+        origin: content_fact
+        explanation: "只评价表达特点，不引用原文。"
+    choice_items:
+      - id: u3-choice-1
+        kind: judge
+        stem: "《暮江吟》的作者是唐代白居易。"
+        answer: 对
+        origin: content_fact
+        explanation: "《暮江吟》为唐·白居易所作。"
+      - id: u3-choice-2
+        kind: judge
+        stem: "《题西林壁》的作者是宋代苏轼。"
+        answer: 对
+        origin: content_fact
+        explanation: "《题西林壁》为宋·苏轼所作。"
+      - id: u3-choice-3
+        kind: judge
+        stem: "《雪梅》在统编教材中的作者署名是宋代卢钺。"
+        answer: 对
+        origin: content_fact
+        explanation: "本卷与统编教材一致，署卢钺。"
+      - id: u3-choice-4
+        kind: judge
+        stem: "《题西林壁》写的是庐山。"
+        answer: 对
+        origin: content_fact
+        explanation: "诗中写庐山因观察角度不同而样子不同。"
+      - id: u3-choice-5
+        kind: judge
+        stem: "《暮江吟》里“可怜”的意思是可爱。"
+        answer: 对
+        origin: content_fact
+        explanation: "这里的“可怜”是可爱，不是可怜悯。"
+      - id: u3-choice-6
+        kind: judge
+        stem: "《爬山虎的脚》的作者是叶圣陶。"
+        answer: 对
+        origin: content_fact
+        explanation: "《爬山虎的脚》的作者是叶圣陶。"
+      - id: u3-choice-7
+        kind: judge
+        stem: "《蟋蟀的住宅》与法国作家法布尔的《昆虫记》有关。"
+        answer: 对
+        origin: content_fact
+        explanation: "课文来自法布尔对蟋蟀的观察，中文为翻译或改编。"
+      - id: u3-choice-8
+        kind: judge
+        stem: "《暮江吟》的作者是李白。"
+        answer: 错
+        origin: content_fact
+        explanation: "作者是白居易，不是李白。"
+      - id: u3-choice-9
+        kind: judge
+        stem: "《爬山虎的脚》的作者是巴金。"
+        answer: 错
+        origin: content_fact
+        explanation: "作者是叶圣陶，不是巴金。"
+      - id: u3-choice-10
+        kind: single
+        stem: "《雪梅》里，雪比梅花更突出的一点是："
+        options: [更香, 更白, 更高, 更早]
+        answer: B
+        origin: content_fact
+        explanation: "诗意是梅不如雪白，雪不如梅香。此处不印出原句。"
+      - id: u3-choice-11
+        kind: single
+        stem: "《题西林壁》主要说明的道理是："
+        options: [站的角度不同，看到的样子会不同, 庐山没有固定的名字, 写诗必须站在山外面, 山越高越好看]
+        answer: A
+        origin: content_fact
+        explanation: "从不同角度观察，结论会不同。"
+      - id: u3-choice-12
+        kind: single
+        stem: "《暮江吟》里“可怜”的意思是："
+        options: [可惜, 可爱, 可怜巴巴, 非常少]
+        answer: B
+        origin: content_fact
+        explanation: "诗中“可怜”是可爱。"
+    readings:
+      - id: u3-read
+        title: 窗台上的豆苗
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "星期一，妈妈在窗台的杯子里放了三颗绿豆。我用铅笔在杯壁外画了一条细线，标上“水面”。"
+          - "星期二，豆子胀大了，皮裂开一条缝。星期三，缝里伸出一点点白芽。我把杯子转了半圈。下午再看，白芽又弯向有光的那边。"
+          - "星期五，芽变成了细茎，茎上有两片小叶。我每天晚上把水补到细线那里，并在本子上写下日期和看到的变化。"
+          - "星期天，小叶展开了。妈妈问：“你怎么确定它在往光亮的地方长？”我说：“因为我做了标记，还连续看了好几天。”"
+        questions:
+          - id: u3-read-1
+            stem: "“我”用什么方法记录豆苗的变化？"
+            answer: "在杯壁外画细线，并按日期把变化写在本子上。"
+            explanation: "写出标记和按日期记录即可。"
+          - id: u3-read-2
+            stem: "白芽后来弯向哪一边？从文中找出原因。"
+            answer: "弯向有光的那边。"
+            explanation: "短文写白芽又弯向有光的那边。"
+          - id: u3-read-3
+            stem: "哪句话说明观察要连续进行？请抄下来。"
+            answer: "因为我做了标记，还连续看了好几天。"
+            explanation: "抄最后一句即可。"
+          - id: u3-read-4
+            stem: "用一个四字词语概括“我”的做法。"
+            answer: "连续观察。"
+            explanation: "答“细致观察”也可。"
+    writing:
+      id: u3-write
+      title: 我的观察记录
+      prompt: "选一种植物或小动物，连续观察几天。把每一次看到的变化写下来。"
+      requirements:
+        - "题目自拟。"
+        - "按时间顺序写，至少写出两个变化。"
+        - "用上具体的样子、颜色或动作。"
+      origin: original_practice
+      word_count: 300
+
+  - number: 4
+    title: 第4单元
+    note: "神话题只考故事里稳定、可核对的情节，不收录教材改编正文。"
+    lessons:
+      - title: 盘古开天地
+        author_status: todo
+        note: "神话人物为盘古。教材署名未核对。只考“分开天地”这一核心情节。"
+      - title: 精卫填海
+        author_status: todo
+        note: "故事见于《山海经·北山经》：女娃游于东海，溺而不返，化为精卫，衔木石填海。"
+      - title: 普罗米修斯
+        author_status: todo
+        note: "希腊神话。只考他为人类取来火种，不收录教材译文。"
+      - title: 女娲补天
+        author_status: todo
+        note: "故事见于《淮南子》等文献：女娲炼五色石补天。教材署名未核对。"
+    words:
+      - word: 盘古
+        source: lesson_title
+        detail: "课文标题《盘古开天地》"
+      - word: 精卫
+        source: lesson_title
+        detail: "课文标题《精卫填海》"
+      - word: 填海
+        source: lesson_title
+        detail: "课文标题《精卫填海》"
+      - word: 女娲
+        source: lesson_title
+        detail: "课文标题《女娲补天》"
+      - word: 补天
+        source: lesson_title
+        detail: "课文标题《女娲补天》"
+      - word: 普罗米修斯
+        source: lesson_title
+        detail: "课文标题《普罗米修斯》"
+    textbook_words: []
+    poems: []
+    cloze_items:
+      - id: u4-cloze-1
+        bank: [坚持, 放弃, 躲避]
+        text: "精卫没有____，仍然一次次把木石投向大海。"
+        answer: 坚持
+        origin: content_fact
+        explanation: "精卫不停地填海。"
+      - id: u4-cloze-2
+        bank: [火种, 冰块, 丝绸]
+        text: "普罗米修斯为人类取来了____。"
+        answer: 火种
+        origin: content_fact
+        explanation: "核心情节是盗火、送火。"
+      - id: u4-cloze-3
+        bank: [五色石, 黄金, 青铜]
+        text: "女娲炼____来补天。"
+        answer: 五色石
+        origin: content_fact
+        explanation: "文献与通行故事都写五色石，不是黄金。"
+      - id: u4-cloze-4
+        bank: [混沌, 市场, 教室]
+        text: "盘古把____的天地分开了。"
+        answer: 混沌
+        origin: content_fact
+        explanation: "盘古开天地，分开混沌。"
+      - id: u4-cloze-5
+        bank: [想象, 抄袭, 沉默]
+        text: "读了神话，可以展开____，写一写和神话人物相处的一天。"
+        answer: 想象
+        origin: original_practice
+        explanation: "习作需要想象。"
+      - id: u4-cloze-6
+        bank: [经过, 口号, 价格]
+        text: "把故事写清楚，要写出事情的____。"
+        answer: 经过
+        origin: original_practice
+        explanation: "叙事要有经过。"
+    choice_items:
+      - id: u4-choice-1
+        kind: judge
+        stem: "盘古开天地的神话里，盘古把混沌的天地分开了。"
+        answer: 对
+        origin: content_fact
+        explanation: "只考分开天地，不考身体化生万物等版本差异较大的细节。"
+      - id: u4-choice-2
+        kind: judge
+        stem: "精卫是女娃变成的，她衔着木石去填海。"
+        answer: 对
+        origin: content_fact
+        explanation: "与《山海经·北山经》的记载一致。"
+      - id: u4-choice-3
+        kind: judge
+        stem: "女娲补天时炼了五色石。"
+        answer: 对
+        origin: content_fact
+        explanation: "女娲炼五色石以补苍天。"
+      - id: u4-choice-4
+        kind: judge
+        stem: "普罗米修斯为人类取来了火种。"
+        answer: 对
+        origin: content_fact
+        explanation: "希腊神话中普罗米修斯盗火给人类。"
+      - id: u4-choice-5
+        kind: judge
+        stem: "精卫最后放弃填海，再也不到海边去。"
+        answer: 错
+        origin: content_fact
+        explanation: "精卫没有放弃，仍衔木石填海。"
+      - id: u4-choice-6
+        kind: judge
+        stem: "女娲用来补天的是黄金。"
+        answer: 错
+        origin: content_fact
+        explanation: "是五色石，不是黄金。"
+      - id: u4-choice-7
+        kind: judge
+        stem: "普罗米修斯把火种藏起来，不让人类使用。"
+        answer: 错
+        origin: content_fact
+        explanation: "他把火种带给了人类。"
+      - id: u4-choice-8
+        kind: single
+        stem: "神话里开天辟地的人物是："
+        options: [盘古, 精卫, 女娲, 孙膑]
+        answer: A
+        origin: content_fact
+        explanation: "开天辟地的是盘古。"
+      - id: u4-choice-9
+        kind: single
+        stem: "精卫填海的故事里，女娃溺水的地方是："
+        options: [北海, 东海, 南海, 西湖]
+        answer: B
+        origin: content_fact
+        explanation: "《山海经》写女娃游于东海。"
+      - id: u4-choice-10
+        kind: single
+        stem: "女娲补天，炼的是："
+        options: [五色石, 青铜, 黄金, 白玉]
+        answer: A
+        origin: content_fact
+        explanation: "炼五色石。"
+    readings:
+      - id: u4-read
+        title: 海边的小石子
+        origin: original_practice
+        credit: 自编阅读材料
+        paragraphs:
+          - "村子外面有一块常被海水盖住的礁石。阿禾想在礁石旁边垒一个小平台，好让奶奶坐下来看海。"
+          - "第一天，他捡来十颗石子，潮水一涨，全冲走了。第二天他又捡，还是被冲走了。同伴说：“别捡了，海比你有力气。”"
+          - "阿禾不再把石子直接堆在潮水最猛的地方。他先在高一点的石缝里卡紧大石，再把小石子填进缝里。一天又一天，平台终于高出了一般的潮水。"
+          - "奶奶坐下时，浪花只打到平台边上。阿禾说：“我比不过整片海，可我可以把石子放到海一时冲不走的地方。”"
+        questions:
+          - id: u4-read-1
+            stem: "阿禾为什么要垒平台？"
+            answer: "想让奶奶坐下来看海。"
+            explanation: "照短文第一句回答即可。"
+          - id: u4-read-2
+            stem: "开头两天，石子为什么留不住？"
+            answer: "石子堆在潮水能冲到的地方，潮水一涨就冲走了。"
+            explanation: "意思相近即可。"
+          - id: u4-read-3
+            stem: "后来他改变了什么做法？"
+            answer: "先在高处的石缝里卡紧大石，再把小石子填进缝里。"
+            explanation: "写出先卡大石、再填小石即可。"
+          - id: u4-read-4
+            stem: "你觉得阿禾是个怎样的孩子？写出一个理由。"
+            answer: "他会坚持，并且肯想办法。他没有放弃，还改了垒石子的方法。"
+            explanation: "观点明确，并用短文中的做法作理由即可。"
+    writing:
+      id: u4-write
+      title: 和神话人物过一天
+      prompt: "选一个你熟悉的神话人物，想象你和他（她）相处的一天。把见到的事按顺序写下来。"
+      requirements:
+        - "题目可以用“我和____过一天”，也可以自拟。"
+        - "写出这个人物做了什么，你又做了什么。"
+        - "想象要合理，语句要通顺。"
+      origin: original_practice
+      word_count: 300

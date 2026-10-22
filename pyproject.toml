@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cn-primary-exam-generator"
+version = "0.1.0"
+description = "小学语文试卷生成器：按教材版本、年级、学期和单元生成学生卷与答案卷。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "jasonsun080721-create" }]
+keywords = ["education", "chinese", "exam", "primary-school", "docx"]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+]
+dependencies = [
+    "python-docx>=1.1.2",
+    "pypinyin>=0.53.0",
+    "PyYAML>=6.0.1",
+    "pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/jasonsun080721-create/cn-primary-exam-generator"
+Repository = "https://github.com/jasonsun080721-create/cn-primary-exam-generator"
+
+[project.scripts]
+cn-exam = "cn_exam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
