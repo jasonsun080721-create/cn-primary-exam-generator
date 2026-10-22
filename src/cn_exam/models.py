@@ -84,12 +84,29 @@ class WritingTask:
 
 
 @dataclass
+class Accumulation:
+    """语文园地“日积月累”。只存已从课本页读到的条目，暂不单独出题。"""
+
+    kind: str
+    text: str = ""
+    title: str = ""
+    dynasty: str = ""
+    author: str = ""
+    source: str = ""
+    lines: list[str] = field(default_factory=list)
+
+
+@dataclass
 class Lesson:
     title: str
     author: str
     author_status: str
     note: str = ""
     pieces: list[str] = field(default_factory=list)
+    # 识字表、写字表的单字。recognize_review 是识字表里印成蓝色的多音字，不计入生字总数。
+    recognize: list[str] = field(default_factory=list)
+    recognize_review: list[str] = field(default_factory=list)
+    write_chars: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -105,6 +122,10 @@ class Unit:
     readings: list[ReadingPassage]
     writing: WritingTask | None
     note: str = ""
+    garden_recognize: list[str] = field(default_factory=list)
+    garden_write: list[str] = field(default_factory=list)
+    garden_note: str = ""
+    accumulation: list[Accumulation] = field(default_factory=list)
 
 
 @dataclass

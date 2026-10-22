@@ -50,6 +50,46 @@ def test_lessons_match_requested_starter_titles() -> None:
     assert book.unit(8).lessons[0].title == "我将无我，不负人民"
     assert [poem.title for poem in book.unit(8).poems] == ["凉州词", "出塞", "夏日绝句"]
     assert book.unit(8).poems[2].lines[-2:] == ["至今思项羽", "不肯过江东"]
+    chusai = book.unit(8).poems[1]
+    assert chusai.lines[2] == "但使龙城飞将在"
+    assert "龙城" in chusai.teacher_note
+    biedong = book.unit(8).accumulation[0]
+    assert biedong.title == "别董大"
+    assert biedong.lines[-1] == "天下谁人不识君"
+
+
+def test_verified_tables_match_textbook_totals() -> None:
+    book = load_edition("rj2026", 4, 1)
+    words = [item.word for unit in book.units for item in unit.textbook_words]
+    assert len(words) == 220
+    assert len(set(words)) == 220
+    recognize: list[str] = []
+    review: list[str] = []
+    write: list[str] = []
+    for unit in book.units:
+        recognize.extend(unit.garden_recognize)
+        write.extend(unit.garden_write)
+        for lesson in unit.lessons:
+            assert lesson.author_status == "verified"
+            assert lesson.author
+            recognize.extend(lesson.recognize)
+            review.extend(lesson.recognize_review)
+            write.extend(lesson.write_chars)
+    # 识字表页末“共250个生字”，蓝色多音字不计入。写字表页末“共250个字”。
+    assert len(recognize) - len(review) == 250
+    assert len(write) == 250
+    tide = book.unit(1).lessons[0]
+    assert tide.author == "赵宗成、朱明元"
+    assert tide.recognize[:3] == ["盐", "薄", "隆"]
+    assert tide.recognize_review == ["薄", "隆"]
+    assert tide.write_chars[0] == "据"
+    tianji = book.unit(2).lessons[3]
+    assert tianji.write_chars == []
+    assert "忌" in tianji.recognize
+    assert "刘义庆" not in book.unit(7).lessons[3].author
+    assert book.unit(5).accumulation == []
+    assert "没有语文园地" in book.unit(5).garden_note
+    assert book.unit(1).accumulation[0].title == "赠刘景文"
 
 
 def test_list_skips_template(tmp_path: Path) -> None:
@@ -58,6 +98,23 @@ def test_list_skips_template(tmp_path: Path) -> None:
     assert "grade4_term1.yaml" in names
     assert all(not path.parent.name.startswith("_") for path in files)
     assert not list(tmp_path.glob("_template.yaml"))
+
+
+def test_reject_recognize_char_that_is_not_han(tmp_path: Path) -> None:
+    payload = _minimal_payload()
+    payload["units"][0]["lessons"][0]["recognize"] = "盐A"
+    _write(tmp_path, payload)
+    with pytest.raises(DataError):
+        load_edition("fixture", 4, 1, data_dir=tmp_path)
+
+
+def test_reject_review_char_outside_recognize(tmp_path: Path) -> None:
+    payload = _minimal_payload()
+    payload["units"][0]["lessons"][0]["recognize"] = "盐"
+    payload["units"][0]["lessons"][0]["recognize_review"] = "薄"
+    _write(tmp_path, payload)
+    with pytest.raises(DataError):
+        load_edition("fixture", 4, 1, data_dir=tmp_path)
 
 
 def test_reject_poem_punctuation(tmp_path: Path) -> None:

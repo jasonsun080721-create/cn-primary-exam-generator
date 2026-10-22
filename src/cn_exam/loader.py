@@ -10,6 +10,7 @@ import yaml
 
 from cn_exam.errors import DataError
 from cn_exam.models import (
+    Accumulation,
     ChoiceItem,
     ClozeItem,
     Edition,
@@ -30,6 +31,8 @@ WORD_SOURCES = {"textbook", "lesson_title", "poem", "content_fact", "original_pr
 ORIGINS = {"original_practice", "textbook", "public_domain", "content_fact"}
 AUTHOR_STATUS = {"verified", "todo"}
 HAN_WORD = re.compile(r"[\u4e00-\u9fff·]{2,8}")
+HAN_CHAR = re.compile(r"[\u4e00-\u9fff]")
+ACCUMULATION_KINDS = {"poem", "quotation", "saying"}
 
 
 def list_edition_files(data_dir: str | Path | None = None) -> list[Path]:
@@ -199,6 +202,10 @@ def _unit(raw: object, path: Path) -> Unit:
             "readings",
             "writing",
             "note",
+            "garden_recognize",
+            "garden_write",
+            "garden_note",
+            "accumulation",
         },
         required={
             "number",
@@ -234,6 +241,12 @@ def _unit(raw: object, path: Path) -> Unit:
         ids.append(writing.id)
     if len(ids) != len(set(ids)):
         raise DataError(f"{where} 存在重复 id")
+    garden_recognize = _han_chars(item.get("garden_recognize", ""), where, "语文园地识字")
+    garden_write = _han_chars(item.get("garden_write", ""), where, "语文园地写字")
+    raw_accumulation = item.get("accumulation", [])
+    if not isinstance(raw_accumulation, list):
+        raise DataError(f"{where} accumulation 必须是列表")
+    accumulation = [_accumulation(row, where) for row in raw_accumulation]
     return Unit(
         number=number,
         title=str(item["title"]).strip(),
@@ -246,6 +259,10 @@ def _unit(raw: object, path: Path) -> Unit:
         readings=readings,
         writing=writing,
         note=str(item.get("note", "")).strip(),
+        garden_recognize=garden_recognize,
+        garden_write=garden_write,
+        garden_note=str(item.get("garden_note", "")).strip(),
+        accumulation=accumulation,
     )
 
 
@@ -253,7 +270,16 @@ def _lesson(raw: object, where: str) -> Lesson:
     item = _mapping(raw, where)
     _keys(
         item,
-        allowed={"title", "author", "author_status", "note", "pieces"},
+        allowed={
+            "title",
+            "author",
+            "author_status",
+            "note",
+            "pieces",
+            "recognize",
+            "recognize_review",
+            "write_chars",
+        },
         required={"title", "author_status"},
         where=where,
     )
@@ -264,12 +290,72 @@ def _lesson(raw: object, where: str) -> Lesson:
     if status == "verified" and not author:
         raise DataError(f"{where} 课文《{item['title']}》标记为已核对作者，但作者为空")
     pieces = [str(piece).strip() for piece in item.get("pieces", [])]
+    title = str(item["title"]).strip()
+    recognize = _han_chars(item.get("recognize", ""), where, f"《{title}》识字")
+    review = _han_chars(item.get("recognize_review", ""), where, f"《{title}》多音字")
+    extra = [char for char in review if char not in recognize]
+    if extra:
+        raise DataError(f"{where}《{title}》蓝色多音字不在识字表中：{''.join(extra)}")
     return Lesson(
-        title=str(item["title"]).strip(),
+        title=title,
         author=author,
         author_status=status,
         note=str(item.get("note", "")).strip(),
         pieces=pieces,
+        recognize=recognize,
+        recognize_review=review,
+        write_chars=_han_chars(item.get("write_chars", ""), where, f"《{title}》写字"),
+    )
+
+
+def _han_chars(raw: object, where: str, label: str) -> list[str]:
+    """识字表、写字表收单个汉字。字符串和列表都可以，空值表示该课没有这一栏。"""
+    if raw is None or raw == "":
+        return []
+    if isinstance(raw, str):
+        chars = [char for char in raw if not char.isspace()]
+    elif isinstance(raw, list):
+        chars = [str(char).strip() for char in raw if str(char).strip()]
+    else:
+        raise DataError(f"{where} {label} 应为字符串或汉字列表")
+    for char in chars:
+        if HAN_CHAR.fullmatch(char) is None:
+            raise DataError(f"{where} {label} 须为单个汉字：{char}")
+    if len(chars) != len(set(chars)):
+        raise DataError(f"{where} {label} 有重复的字")
+    return chars
+
+
+def _accumulation(raw: object, where: str) -> Accumulation:
+    item = _mapping(raw, f"{where} 日积月累")
+    _keys(
+        item,
+        allowed={"kind", "text", "title", "dynasty", "author", "source", "lines"},
+        required={"kind"},
+        where=f"{where} 日积月累",
+    )
+    kind = str(item["kind"]).strip()
+    if kind not in ACCUMULATION_KINDS:
+        raise DataError(f"{where} 日积月累 kind 无效：{kind}")
+    lines = [str(line).strip() for line in item.get("lines", [])]
+    text = str(item.get("text", "")).strip()
+    title = str(item.get("title", "")).strip()
+    if kind == "poem":
+        if not title or not str(item.get("author", "")).strip() or len(lines) < 2:
+            raise DataError(f"{where} 日积月累古诗需要 title、author 和诗句")
+        for line in lines:
+            if re.fullmatch(r"[\u4e00-\u9fff]+", line) is None or len(line) not in {5, 7}:
+                raise DataError(f"{where} 日积月累《{title}》诗句须为五言或七言且不含标点：{line}")
+    elif not text:
+        raise DataError(f"{where} 日积月累缺少正文")
+    return Accumulation(
+        kind=kind,
+        text=text,
+        title=title,
+        dynasty=str(item.get("dynasty", "")).strip(),
+        author=str(item.get("author", "")).strip(),
+        source=str(item.get("source", "")).strip(),
+        lines=lines,
     )
 
 

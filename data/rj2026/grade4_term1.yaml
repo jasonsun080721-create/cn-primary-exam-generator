@@ -13,16 +13,13 @@ edition:
   term: 1
   book_name: 四年级上册
 
-paper_note: "古诗按统编教材通行文本录入。词语表只收录已从课本词语表页读清的词，未录完的课次不出那些词。识字表、写字表和各单元日积月累尚未逐字录全。除已核对的标题、习作题目、文学常识和古诗外，阅读与选词填空为自编练习。"
+paper_note: "词语表、识字表、写字表和各单元日积月累已按国家中小学智慧教育平台课本 PDF 核对。识字表里印成蓝色的多音字记在 recognize_review，不计入 250 个生字。课文原文和习作指导不抄入；阅读、选词填空和习作题干仍是自编。"
 
 unit_duration_minutes: 60
 
 todos:
-  - "词语表已核对第1、2、4、5、6课。第3课《现代诗二首》在词语表第1页上未见单独条目。第7课和不第8–27课的词语表还没从页面录完，不要用教辅听写单补。"
-  - "识字表、写字表已看到页面，但字小，除第1课外未逐字确认，暂不写入。"
-  - "各单元日积月累未逐页录全。有一页印着〔唐〕高适《别董大》，末句是“天下谁人不识君”，同一页没有看清单元号。"
-  - "《出塞》“龙城/卢城”未在本次页图里逐字核对。诗题已在目录页核对，正文暂用统编通行的“龙城”。"
-  - "《观潮》《夜间飞行的秘密》《方帽子店》《秋晚的江上》《花牛歌》及神话课文的教材署名，本次页图未逐行核对。"
+  - "习作页上的作前指导没有逐字抄入。卷面习作仍用自编题干，只借用已经核对的习作题目。"
+  - "例文《我家的杏熟了》《小木船》只记下脚注里的作者或出处，正文未收录。"
 
 exam_ranges:
   midterm:
@@ -62,16 +59,24 @@ units:
     note: "课文标题按项目给定的 2026 秋新版目录收录。"
     lessons:
       - title: 观潮
-        author_status: todo
-        note: "课文写钱塘江大潮。2026 秋新版署名未逐页核对，不出作者题。"
+        author: 赵宗成、朱明元
+        author_status: verified
+        recognize: "盐薄隆鼎沸浩崩霎余漫吼"
+        recognize_review: "薄隆"
+        write_chars: "据随堤顿逐渐堵墙浩崩霎余"
+        note: "脚注：本文作者赵宗成、朱明元，选作课文时有改动。不收录原文。"
       - title: 繁星
         author: 巴金
         author_status: verified
-        note: "巴金散文。此处不收录原文。"
+        recognize: "昧坠萤"
+        write_chars: "繁怀寂谈熟躺模糊围舞"
+        note: "脚注：本文作者巴金，选作课文时有改动。不收录原文。"
       - title: 现代诗二首
-        author_status: todo
+        author: 刘大白、徐志摩
+        author_status: verified
         pieces: [秋晚的江上, 花牛歌]
-        note: "篇目据电子课本目录。作者未在本次页图中核对，不出作者题，也不把现代诗当作古诗默写。"
+        recognize: "巢苇瞬穗罗霸"
+        note: "脚注：《秋晚的江上》刘大白，《花牛歌》徐志摩。现代诗不作古诗默写，也不收录原文。写字表无此课。"
     words:
       - word: 观潮
         source: lesson_title
@@ -127,6 +132,17 @@ units:
         detail: "词语表第2课《繁星》"
       - word: 沉睡
         detail: "词语表第2课《繁星》"
+
+    accumulation:
+      - kind: poem
+        title: 赠刘景文
+        dynasty: 宋
+        author: 苏轼
+        lines:
+          - 荷尽已无擎雨盖
+          - 菊残犹有傲霜枝
+          - 一年好景君须记
+          - 最是橙黄橘绿时
     poems: []
     cloze_items:
       - id: u1-cloze-1
@@ -257,21 +273,34 @@ units:
 
   - number: 2
     title: 第2单元
-    note: "《夜间飞行的秘密》《方帽子店》的教材正文未核对，不出情节题。"
+    note: "署名已按课文脚注核对。正文不收录，不出情节题。"
     lessons:
       - title: 一个豆荚里的五粒豆
         author: 安徒生
         author_status: verified
-        note: "安徒生童话。此处不收录课文译文。"
+        recognize: "豌僵预揭囚劈框吻脏溢健康"
+        write_chars: "舒适揭晓滚滑擦探曾沟涨"
+        note: "脚注：本文作者是丹麦的安徒生，译者叶君健，选作课文时有改动。不收录译文。"
       - title: 夜间飞行的秘密
-        author_status: todo
-        note: "正文与署名未核对，不出内容题。"
+        author: 郝应其
+        author_status: verified
+        recognize: "蝙蝠蛾避锐蝇障碍荧屏驾"
+        recognize_review: "屏"
+        write_chars: "蚊即题绳嘴蝇研究驾驶"
+        note: "脚注：本文作者郝应其，选作课文时有改动。不收录原文。"
       - title: 方帽子店
-        author_status: todo
-        note: "正文与署名未核对，不出情节题。"
+        author: 施雁冰
+        author_status: verified
+        recognize: "橱蕉扣嚷溜筒董"
+        recognize_review: "溜"
+        write_chars: "帽脑袋假扣懂溜筒摆玻璃"
+        note: "脚注：本文作者施雁冰，选作课文时有改动。不收录原文。"
       - title: 田忌赛马
-        author_status: todo
-        note: "故事见于《史记·孙子吴起列传》。教材改编文字不收录。出题只考孙膑的安排和二比一的结果。"
+        author: 课文未署现代作者
+        author_status: verified
+        recognize: "忌将获赢拳跃测输谋划策荐"
+        recognize_review: "将划"
+        note: "脚注：本文根据《史记·孙子吴起列传》相关内容改写。不收录改编正文。写字表、词语表都没有此课。"
     words:
       - word: 豆荚
         source: lesson_title
@@ -362,6 +391,38 @@ units:
       - word: 玻璃
         detail: "词语表第6课《方帽子店》"
         pinyin: bō li
+      - word: 提纲
+        detail: "词语表第2单元语文园地"
+      - word: 生锈
+        detail: "词语表第2单元语文园地"
+      - word: 泡沫
+        detail: "词语表第2单元语文园地"
+      - word: 综合
+        detail: "词语表第2单元语文园地"
+      - word: 氧气
+        detail: "词语表第2单元语文园地"
+      - word: 结账
+        detail: "词语表第2单元语文园地"
+      - word: 矿物
+        detail: "词语表第2单元语文园地"
+      - word: 俱乐部
+        detail: "词语表第2单元语文园地"
+
+    garden_recognize: "纲揍锈沫综氧账矿俱"
+    garden_write: "纲揍锈沫综氧账矿俱"
+    accumulation:
+      - kind: quotation
+        text: "博学之，审问之，慎思之，明辨之，笃行之。"
+        source: "《中庸》"
+      - kind: quotation
+        text: "智能之士，不学不成，不问不知。"
+        source: "王充"
+      - kind: quotation
+        text: "人非生而知之者，孰能无惑？"
+        source: "韩愈"
+      - kind: quotation
+        text: "善疑者，不疑人之所疑，而疑人之所不疑。"
+        source: "方以智"
     poems: []
     cloze_items:
       - id: u2-cloze-1
@@ -492,21 +553,29 @@ units:
 
   - number: 3
     title: 第3单元
-    note: "三首七言绝句按统编教材通行文本录入，不带标点。"
+    note: "三首七言绝句已在第8课页面核对，录入时不带标点。"
     lessons:
       - title: 古诗三首
-        author_status: verified
         author: 白居易、苏轼、卢钺
-        note: "各诗作者见 poems。此处的 author 只说明三首诗都已核对署名。"
+        author_status: verified
         pieces: [暮江吟, 题西林壁, 雪梅]
+        recognize: "暮残瑟缘降骚评逊"
+        recognize_review: "降"
+        write_chars: "残铺壁横侧峰庐缘降评章输"
+        note: "第8课页面分别署〔唐〕白居易、〔宋〕苏轼、〔宋〕卢钺。词语表无此课。"
       - title: 爬山虎的脚
         author: 叶圣陶
         author_status: verified
-        note: "叶圣陶散文。此处不收录原文。"
+        recognize: "茎柄蜗曲萎"
+        recognize_review: "曲"
+        write_chars: "虎脚操嫩隙柄触痕迹瞧"
+        note: "脚注：本文作者叶圣陶，选作课文时有改动。不收录原文。"
       - title: 蟋蟀的住宅
         author: 法布尔
         author_status: verified
-        note: "与法布尔《昆虫记》中的观察有关。中文课文为翻译或改编，此处不收录译文。"
+        recognize: "蟋蟀宅慎址畅倾骤置糙朴燥"
+        write_chars: "宅毫重选择址厅专修较腿增"
+        note: "脚注：本文作者是法国的法布尔，译者王大文，选作课文时有改动。不收录译文。"
     words:
       - word: 爬山虎
         source: lesson_title
@@ -517,7 +586,64 @@ units:
       - word: 住宅
         source: lesson_title
         detail: "课文标题《蟋蟀的住宅》"
-    textbook_words: []
+    textbook_words:
+      - word: 爬山虎
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 操场
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 嫩绿
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 新鲜
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 均匀
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 空隙
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 叶柄
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 触角
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 弯曲
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 痕迹
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 瞧不起
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 牢固
+        detail: "词语表第9课《爬山虎的脚》"
+      - word: 住宅
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 选择
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 住址
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 大厅
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 柔弱
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 平坦
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 光滑
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 修理
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 重要
+        detail: "词语表第10课《蟋蟀的住宅》"
+      - word: 增长
+        detail: "词语表第10课《蟋蟀的住宅》"
+    accumulation:
+      - kind: saying
+        text: "立了秋，把扇丢。"
+      - kind: saying
+        text: "二八月，乱穿衣。"
+      - kind: saying
+        text: "夏雨少，秋霜早。"
+      - kind: saying
+        text: "八月里来雁门开，雁儿脚上带霜来。"
+      - kind: saying
+        text: "一场秋雨一场寒，十场秋雨要穿棉。"
+      - kind: saying
+        text: "八月暖，九月温，十月还有小阳春。"
     poems:
       - title: 暮江吟
         dynasty: 唐
@@ -585,7 +711,7 @@ units:
             meaning: "评议高下"
           - term: 逊
             meaning: "比不上"
-        teacher_note: "统编教材署名为宋·卢钺。有的选集把同题诗系于卢梅坡名下，本卷与统编教材一致，诗句不改。"
+        teacher_note: "课本第8课署〔宋〕卢钺。有的选集把同题诗系于卢梅坡名下，本卷按课本署名，诗句不改。"
         words:
           - word: 争春
             source: poem
@@ -749,17 +875,29 @@ units:
     note: "神话题只考故事里稳定、可核对的情节，不收录教材改编正文。"
     lessons:
       - title: 盘古开天地
-        author_status: todo
-        note: "神话人物为盘古。教材署名未核对。只考“分开天地”这一核心情节。"
+        author: 袁珂整理
+        author_status: verified
+        recognize: "斧缓浊丈肢躯液"
+        write_chars: "醒翻缓踏丈撑疲竭耀肢整"
+        note: "脚注：本文是古代神话，由袁珂整理，选作课文时有改动。不收录改编正文。"
       - title: 精卫填海
-        author_status: todo
-        note: "故事见于《山海经·北山经》：女娃游于东海，溺而不返，化为精卫，衔木石填海。"
+        author: 选自《山海经·北山经》
+        author_status: verified
+        recognize: "曰溺"
+        write_chars: "填帝曰娃衔"
+        note: "脚注写明选自《山海经·北山经》，题目为后人所加。课文未另署作者名。词语表无此课。"
       - title: 普罗米修斯
-        author_status: todo
-        note: "希腊神话。只考他为人类取来火种，不收录教材译文。"
+        author: 课文未署名
+        author_status: verified
+        recognize: "斯悲惨盗驰佩违锁遭肝脏愤砸"
+        recognize_review: "脏"
+        write_chars: "喷颗败敬佩忍既遭屈肝脏获"
+        note: "脚注：本文是古希腊神话，选作课文时有改动。不收录译文。"
       - title: 女娲补天
-        author_status: todo
-        note: "故事见于《淮南子》等文献：女娲炼五色石补天。教材署名未核对。"
+        author: 袁珂整理
+        author_status: verified
+        recognize: "兽措陷混拣燃炼熄浆杀颂"
+        note: "脚注：本文是古代神话，由袁珂整理，选作课文时有改动。写字表、词语表都没有此课。不收录改编正文。"
     words:
       - word: 盘古
         source: lesson_title
@@ -779,7 +917,79 @@ units:
       - word: 普罗米修斯
         source: lesson_title
         detail: "课文标题《普罗米修斯》"
-    textbook_words: []
+    textbook_words:
+      - word: 宇宙
+        detail: "词语表第11课《盘古开天地》"
+      - word: 黑乎乎
+        detail: "词语表第11课《盘古开天地》"
+      - word: 翻身
+        detail: "词语表第11课《盘古开天地》"
+      - word: 下降
+        detail: "词语表第11课《盘古开天地》"
+      - word: 精疲力竭
+        detail: "词语表第11课《盘古开天地》"
+      - word: 飘动
+        detail: "词语表第11课《盘古开天地》"
+      - word: 照耀
+        detail: "词语表第11课《盘古开天地》"
+      - word: 四肢
+        detail: "词语表第11课《盘古开天地》"
+      - word: 奔流不息
+        detail: "词语表第11课《盘古开天地》"
+      - word: 茂盛
+        detail: "词语表第11课《盘古开天地》"
+      - word: 整个
+        detail: "词语表第11课《盘古开天地》"
+      - word: 喷射
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 气急败坏
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 严厉
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 立即
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 执行
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 敬佩
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 坚定
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 忍受
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 遭受
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 尽管
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 屈服
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 肝脏
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 获得
+        detail: "词语表第13课《普罗米修斯》"
+      - word: 花卉
+        detail: "词语表第4单元语文园地"
+      - word: 玫瑰
+        detail: "词语表第4单元语文园地"
+      - word: 牡丹
+        detail: "词语表第4单元语文园地"
+      - word: 花蕾
+        detail: "词语表第4单元语文园地"
+      - word: 茉莉
+        detail: "词语表第4单元语文园地"
+      - word: 海棠
+        detail: "词语表第4单元语文园地"
+    garden_recognize: "卉玫瑰牡丹蕾茉莉棠"
+    garden_write: "卉玫瑰牡丹蕾茉莉棠"
+    accumulation:
+      - kind: poem
+        title: 嫦娥
+        dynasty: 唐
+        author: 李商隐
+        lines:
+          - 云母屏风烛影深
+          - 长河渐落晓星沉
+          - 嫦娥应悔偷灵药
+          - 碧海青天夜夜心
     poems: []
     cloze_items:
       - id: u4-cloze-1
@@ -922,14 +1132,20 @@ units:
 
   - number: 5
     title: 第5单元
-    note: "课文标题据电子课本目录。阅读和选词填空是自编练习。习作题目为“生活万花筒”。"
+    note: "本单元目录和正文都没有语文园地。例文《我家的杏熟了》脚注作者周蓉；《小木船》脚注选自人民教育出版社《全日制十年制学校小学课本（试用本）语文第七册》。例文正文未收录。阅读和选词填空是自编练习。"
     lessons:
       - title: 麻雀
-        author_status: todo
-        note: "课文写老麻雀救护小麻雀。教材署名本次未逐页核对，不出作者题。"
+        author: 屠格涅夫
+        author_status: verified
+        recognize: "嗅奈拯嘶哑牺牲庞"
+        write_chars: "嗅猛烈奈躯掩浑牺牲庞强量"
+        note: "脚注：本文作者是俄国的屠格涅夫，译者巴金，选作课文时有改动。不收录译文。"
       - title: 爬天都峰
-        author_status: todo
-        note: "写爬黄山天都峰。教材署名本次未核对。"
+        author: 黄亦波
+        author_status: verified
+        recognize: "链颤攀辫呵"
+        write_chars: "哩陡级链颤纪攀猴呵啦鼓"
+        note: "脚注：本文作者黄亦波，选作课文时有改动。不收录原文。"
     words:
       - word: 麻雀
         source: lesson_title
@@ -937,7 +1153,50 @@ units:
       - word: 天都峰
         source: lesson_title
         detail: "课文标题《爬天都峰》"
-    textbook_words: []
+    textbook_words:
+      - word: 麻雀
+        detail: "词语表第15课《麻雀》"
+      - word: 悄悄
+        detail: "词语表第15课《麻雀》"
+      - word: 猛烈
+        detail: "词语表第15课《麻雀》"
+      - word: 无可奈何
+        detail: "词语表第15课《麻雀》"
+      - word: 身躯
+        detail: "词语表第15课《麻雀》"
+      - word: 掩护
+        detail: "词语表第15课《麻雀》"
+      - word: 紧张
+        detail: "词语表第15课《麻雀》"
+      - word: 浑身
+        detail: "词语表第15课《麻雀》"
+      - word: 牺牲
+        detail: "词语表第15课《麻雀》"
+      - word: 庞大
+        detail: "词语表第15课《麻雀》"
+      - word: 强大
+        detail: "词语表第15课《麻雀》"
+      - word: 力量
+        detail: "词语表第15课《麻雀》"
+      - word: 勇气
+        detail: "词语表第15课《麻雀》"
+      - word: 石级
+        detail: "词语表第16课《爬天都峰》"
+      - word: 发颤
+        detail: "词语表第16课《爬天都峰》"
+      - word: 年纪
+        detail: "词语表第16课《爬天都峰》"
+      - word: 奋力
+        detail: "词语表第16课《爬天都峰》"
+      - word: 猴子
+        detail: "词语表第16课《爬天都峰》"
+      - word: 纪念
+        detail: "词语表第16课《爬天都峰》"
+      - word: 笑呵呵
+        detail: "词语表第16课《爬天都峰》"
+      - word: 鼓舞
+        detail: "词语表第16课《爬天都峰》"
+    garden_note: "目录和正文都没有语文园地，因此没有日积月累。"
     poems: []
     cloze_items:
       - id: u5-cloze-1
@@ -1070,14 +1329,24 @@ units:
     note: "课文标题和习作题目据电子课本目录。不引用课文原文。"
     lessons:
       - title: 长城
-        author_status: todo
-        note: "介绍长城。教材署名本次未核对。"
+        author: 课文未署名
+        author_status: verified
+        recognize: "峻基础扩砖屯兵堡垒仗畜耗"
+        write_chars: "峻旋扩砖筑隔仗扶耗智慧"
+        note: "脚注：选自人民教育出版社《全日制十年制学校小学课本（试用本）语文第九册》，有改动。未署作者名。不收录原文。"
       - title: 颐和园
-        author_status: todo
-        note: "按游览顺序写颐和园。教材署名本次未核对。"
+        author: 袁鹰
+        author_status: verified
+        recognize: "殿漆琉佛煌"
+        recognize_review: "佛"
+        write_chars: "绕幅栽耸腰煌镜隐狮"
+        note: "脚注：本文作者袁鹰，选作课文时有改动。不收录原文。"
       - title: 秦兵马俑
-        author_status: todo
-        note: "略读课文。教材署名本次未核对。"
+        author: 课文未署名
+        author_status: verified
+        recognize: "享誉宏皇率着靴誓塑惟肖拟逼"
+        recognize_review: "着"
+        note: "脚注：选自江苏教育出版社《九年义务教育六年制小学试用课本语文第十二册》，有改动。未署作者名。写字表、词语表都没有此课。不收录原文。"
     words:
       - word: 长城
         source: lesson_title
@@ -1088,7 +1357,77 @@ units:
       - word: 兵马俑
         source: lesson_title
         detail: "课文标题《秦兵马俑》"
-    textbook_words: []
+    textbook_words:
+      - word: 崇山峻岭
+        detail: "词语表第17课《长城》"
+      - word: 盘旋
+        detail: "词语表第17课《长城》"
+      - word: 扩建
+        detail: "词语表第17课《长城》"
+      - word: 修筑
+        detail: "词语表第17课《长城》"
+      - word: 平整
+        detail: "词语表第17课《长城》"
+      - word: 打仗
+        detail: "词语表第17课《长城》"
+      - word: 自然
+        detail: "词语表第17课《长城》"
+      - word: 当地
+        detail: "词语表第17课《长城》"
+      - word: 耗费
+        detail: "词语表第17课《长城》"
+      - word: 大量
+        detail: "词语表第17课《长城》"
+      - word: 智慧
+        detail: "词语表第17课《长城》"
+      - word: 工程
+        detail: "词语表第17课《长城》"
+      - word: 奇迹
+        detail: "词语表第17课《长城》"
+      - word: 柱子
+        detail: "词语表第18课《颐和园》"
+      - word: 栏杆
+        detail: "词语表第18课《颐和园》"
+      - word: 人物
+        detail: "词语表第18课《颐和园》"
+      - word: 神清气爽
+        detail: "词语表第18课《颐和园》"
+      - word: 建筑
+        detail: "词语表第18课《颐和园》"
+      - word: 耸立
+        detail: "词语表第18课《颐和园》"
+      - word: 半山腰
+        detail: "词语表第18课《颐和园》"
+      - word: 金碧辉煌
+        detail: "词语表第18课《颐和园》"
+      - word: 镜子
+        detail: "词语表第18课《颐和园》"
+      - word: 隐隐约约
+        detail: "词语表第18课《颐和园》"
+      - word: 游人
+        detail: "词语表第18课《颐和园》"
+      - word: 狮子
+        detail: "词语表第18课《颐和园》"
+      - word: 姿态
+        detail: "词语表第18课《颐和园》"
+      - word: 陵寝
+        detail: "词语表第6单元语文园地"
+      - word: 景观
+        detail: "词语表第6单元语文园地"
+      - word: 丝绸
+        detail: "词语表第6单元语文园地"
+    garden_recognize: "萨昭陵寝堰尼绸廊"
+    garden_write: "萨昭陵寝堰尼绸廊"
+    accumulation:
+      - kind: poem
+        title: 黄鹤楼送孟浩然之广陵
+        dynasty: 唐
+        author: 李白
+        lines:
+          - 故人西辞黄鹤楼
+          - 烟花三月下扬州
+          - 孤帆远影碧空尽
+          - 唯见长江天际流
     poems: []
     cloze_items:
       - id: u6-cloze-1
@@ -1221,18 +1560,30 @@ units:
     note: "课文标题据电子课本目录。《王戎不取道旁李》只考故事里稳定的情节，不录课文原文。"
     lessons:
       - title: 牛和鹅
-        author_status: todo
-        note: "教材署名本次未核对，不出作者题。"
+        author: 任大霖
+        author_status: verified
+        recognize: "鹅屁股谓捶顽吁膊瓶怖欺掐"
+        write_chars: "鹅骑拳竖竟胸鞋拖胳膊握摔"
+        note: "脚注：本文作者任大霖，选作课文时有改动。不收录原文。"
       - title: 一只窝囊的大老虎
-        author_status: todo
-        note: "教材署名本次未核对。"
+        author: 叶至善
+        author_status: verified
+        recognize: "露羡殷逗撇啊霉亏撤哄拙唉"
+        recognize_review: "露啊唉"
+        write_chars: "表演俩练捧示技撤推哄堂摘"
+        note: "脚注：本文作者叶至善，选作课文时有改动。不收录原文。"
       - title: 陀螺
-        author_status: todo
-        note: "略读课文。教材署名本次未核对。"
+        author: 高洪波
+        author_status: verified
+        recognize: "钉质岳削废骂帅衅扭彻溃豪"
+        recognize_review: "钉"
+        note: "脚注：本文作者高洪波，选作课文时有改动。写字表、词语表都没有此课。不收录原文。"
       - title: 王戎不取道旁李
-        author: 刘义庆
-        author_status: todo
-        note: "故事见于《世说新语·雅量》。教材是否署刘义庆，本次页图未核对，故 author_status 仍为 todo。"
+        author: 选自《世说新语·雅量》
+        author_status: verified
+        recognize: "戎诸竞唯"
+        write_chars: "戎诸竞唯"
+        note: "脚注写明选自《世说新语·雅量》，题目为后人所加。课文没有署刘义庆。词语表无此课。"
     words:
       - word: 窝囊
         source: lesson_title
@@ -1243,7 +1594,82 @@ units:
       - word: 王戎
         source: lesson_title
         detail: "课文标题《王戎不取道旁李》"
-    textbook_words: []
+    textbook_words:
+      - word: 虽然
+        detail: "词语表第20课《牛和鹅》"
+      - word: 拳头
+        detail: "词语表第20课《牛和鹅》"
+      - word: 故意
+        detail: "词语表第20课《牛和鹅》"
+      - word: 神气
+        detail: "词语表第20课《牛和鹅》"
+      - word: 忙乱
+        detail: "词语表第20课《牛和鹅》"
+      - word: 鞋子
+        detail: "词语表第20课《牛和鹅》"
+      - word: 助威
+        detail: "词语表第20课《牛和鹅》"
+      - word: 胳膊
+        detail: "词语表第20课《牛和鹅》"
+      - word: 纷纷
+        detail: "词语表第20课《牛和鹅》"
+      - word: 可笑
+        detail: "词语表第20课《牛和鹅》"
+      - word: 无缘无故
+        detail: "词语表第20课《牛和鹅》"
+      - word: 文艺
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 表演
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 角色
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 排练
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 主意
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 通情达理
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 充分
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 提示
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 演技
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 撤换
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 等候
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 哄堂大笑
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 垂头丧气
+        detail: "词语表第21课《一只窝囊的大老虎》"
+      - word: 韭菜
+        detail: "词语表第7单元语文园地"
+      - word: 芹菜
+        detail: "词语表第7单元语文园地"
+      - word: 辣椒
+        detail: "词语表第7单元语文园地"
+      - word: 红薯
+        detail: "词语表第7单元语文园地"
+      - word: 莲藕
+        detail: "词语表第7单元语文园地"
+      - word: 芋头
+        detail: "词语表第7单元语文园地"
+    garden_recognize: "韭芹椒蒜薯藕芋姜"
+    garden_write: "韭芹椒蒜薯藕芋姜"
+    accumulation:
+      - kind: saying
+        text: "尺有所短，寸有所长。"
+      - kind: saying
+        text: "仁者见仁，智者见智。"
+      - kind: saying
+        text: "机不可失，时不再来。"
+      - kind: saying
+        text: "差之毫厘，谬以千里。"
+      - kind: saying
+        text: "一言既出，驷马难追。"
+      - kind: saying
+        text: "知无不言，言无不尽。"
     poems: []
     cloze_items:
       - id: u7-cloze-1
@@ -1374,22 +1800,32 @@ units:
 
   - number: 8
     title: 第8单元
-    note: "课文标题和三首诗题据电子课本目录。《夏日绝句》的作者和后两句已在课本页上看到。另两首按统编通行文本录入。"
+    note: "第27课三首诗的署名和正文已在课本页面核对。《出塞》作“龙城”。"
     lessons:
       - title: 我将无我，不负人民
-        author_status: todo
-        note: "教材署名本次未逐页核对。"
+        author: 杜尚泽
+        author_status: verified
+        recognize: "菲抛奉亿邀"
+        write_chars: "席抛激奉训亿勤邀"
+        note: "脚注：本文作者杜尚泽，原文刊载于2019年3月24日《人民日报》，选作课文时有改动。不收录原文。"
       - title: 为中华之崛起而读书
-        author_status: todo
-        note: "课文写周恩来少年立志。教材署名本次未逐页核对，不出作者判断题。"
+        author: 余心言
+        author_status: verified
+        recognize: "崛范魏默晰惑轧惩肇斥辱"
+        write_chars: "崛肃脆默晰离凡惩斥燃"
+        note: "脚注：本文作者余心言，选作课文时有改动。不收录原文。"
       - title: 延安，我把你追寻
-        author_status: todo
-        note: "略读课文。教材署名本次未核对。"
+        author: 祁念曾
+        author_status: verified
+        recognize: "昔茅炕索媚"
+        note: "脚注：本文作者祁念曾，选作课文时有改动。写字表、词语表都没有此课。不收录原文。"
       - title: 古诗三首
         author: 王翰、王昌龄、李清照
         author_status: verified
         pieces: [凉州词, 出塞, 夏日绝句]
-        note: "《夏日绝句》页上署〔宋〕李清照。王翰、王昌龄是这两首诗的通行作者。"
+        recognize: "催君征塞秦杰鬼"
+        write_chars: "词葡萄杯塞秦将杰鬼雄项"
+        note: "第27课页面分别署〔唐〕王翰、〔唐〕王昌龄、〔宋〕李清照。《出塞》正文是“龙城”。词语表无此课。"
     words:
       - word: 崛起
         source: lesson_title
@@ -1397,7 +1833,69 @@ units:
       - word: 延安
         source: lesson_title
         detail: "课文标题《延安，我把你追寻》"
-    textbook_words: []
+    textbook_words:
+      - word: 主席
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 举行
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 心情
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 补充
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 激动
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 状态
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 奉献
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 运动员
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 训练
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 建设
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 勤劳
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 邀请
+        detail: "词语表第24课《我将无我，不负人民》"
+      - word: 崛起
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 严肃
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 干脆
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 默默
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 若有所思
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 清晰
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 离开
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 随便
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 忘怀
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 非凡
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 惩处
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 训斥
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 燃烧
+        detail: "词语表第25课《为中华之崛起而读书》"
+      - word: 响亮
+        detail: "词语表第25课《为中华之崛起而读书》"
+    accumulation:
+      - kind: poem
+        title: 别董大
+        dynasty: 唐
+        author: 高适
+        lines:
+          - 千里黄云白日曛
+          - 北风吹雁雪纷纷
+          - 莫愁前路无知己
+          - 天下谁人不识君
     poems:
       - title: 凉州词
         dynasty: 唐
@@ -1410,7 +1908,7 @@ units:
         glosses:
           - term: 催
             meaning: "催人出发"
-        teacher_note: "诗题已在2026秋新版目录核对。四句按统编通行文本，本次页图没有把四句逐字重读。"
+        teacher_note: "四句已在第27课页面核对。"
         words:
           - word: 琵琶
             source: poem
@@ -1431,7 +1929,7 @@ units:
             meaning: "汉代名将李广"
           - term: 度
             meaning: "越过"
-        teacher_note: "诗题已在目录核对。正文用统编通行的“龙城”。有的本子作“卢城”，本次页图未逐字核对。"
+        teacher_note: "课本正文是“但使龙城飞将在”，不是“卢城”。四句已在第27课页面核对。"
         words:
           - word: 阴山
             source: poem
