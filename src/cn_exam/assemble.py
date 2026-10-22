@@ -104,6 +104,18 @@ def assemble_paper(
     )
     visible = _visible_blob(scope_detail, classical, cloze, choice, reading, writing)
     visible += "\n".join(reading_section_preamble)
+    # 大题名和作答说明会印在学生卷上。里面已经出现的词不再当作看拼音的答案。
+    shown = {
+        "classical": classical,
+        "cloze": cloze,
+        "choice": choice,
+        "reading": reading,
+        "writing": writing,
+    }
+    for key, questions in shown.items():
+        if questions:
+            visible += f"\n{SECTION_TITLES[key]}\n{SECTION_INSTRUCTIONS[key]}"
+    visible += f"\n{SECTION_TITLES['pinyin']}\n{SECTION_INSTRUCTIONS['pinyin']}"
     word_bank = _collect_words(units)
     pinyin = _build_pinyin(word_bank, visible, wanted["pinyin"], rng)
 

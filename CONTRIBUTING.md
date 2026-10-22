@@ -37,11 +37,11 @@ cn-exam --edition <edition-id> --grade <年级> --term <1或2> --unit 1 --no-pdf
 
 ## 数据规则
 
-1. 写字表、词语表只在对照过纸质课本或出版社目录后写入 `textbook_words`。`source` 填 `textbook`。空列表是合法的，表示还没核对。
+1. 词语表写入 `textbook_words`，`source` 填 `textbook`。识字表、写字表的单字写入课文的 `recognize`、`write_chars`；语文园地的单字写入单元的 `garden_recognize`、`garden_write`。识字表中印成蓝色、不计入生字总数的多音字再写入 `recognize_review`。这些单字目前只作数据，不参与组卷。空列表表示这一栏在课本里没有。
 2. 有 `textbook_words` 时，看拼音写词语只从这里抽词。没有时，才退回课文标题词和古诗中的词，并且会丢掉已经印在卷头或题干里的词，避免答案直接露在卷面上。
 3. 古诗 `lines` 只保留汉字，五言或七言，不要标点。作者、朝代要和教材署名一致；有文献分歧时写在 `teacher_note`，这段话只出现在答案卷。
 4. 不要把仍受著作权保护的现代课文、译文粘贴进仓库。阅读短文使用 `origin: original_practice`，并在 `credit` 里写明“自编阅读材料”。公有领域原文使用 `origin: public_domain`。
-5. 作者不确定就设 `author_status: todo`，不要猜署名。已核对才用 `verified`，并且 `author` 不能为空。
+5. 作者不确定就设 `author_status: todo`，不要猜署名。已核对才用 `verified`，并且 `author` 不能为空。脚注只有出处、没有人名时，把出处写进 `author`，不要补上课本没写的人名。日积月累写入单元的 `accumulation`，古诗用 `kind: poem`，名句用 `quotation` 或 `saying`。
 6. 选词填空的句子里用 `____` 表示空，`answer` 必须是 `bank` 中的一项。
 7. 判断题 `kind` 为 `judge`，`answer` 只能是 `对` 或 `错`，不要写 `options`。选择题 `kind` 为 `single`，`answer` 是 `A`、`B`、`C`……
 8. 每个 `id` 在同一单元内唯一。
