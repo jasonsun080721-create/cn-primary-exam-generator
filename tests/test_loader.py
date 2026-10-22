@@ -19,14 +19,19 @@ def test_load_rj2026_poems_and_units() -> None:
     book = load_edition("rj2026", 4, 1)
     assert book.name == "人教版（统编版）"
     assert book.series_label == "2026秋新版"
-    assert [unit.number for unit in book.units] == [1, 2, 3, 4]
+    assert [unit.number for unit in book.units] == [1, 2, 3, 4, 5, 6, 7, 8]
     poems = {poem.title: poem for poem in book.unit(3).poems}
     assert set(poems) == set(POEMS)
     for title, lines in POEMS.items():
         assert poems[title].lines == lines
         assert poems[title].author in {"白居易", "苏轼", "卢钺"}
     assert book.unit(3).poems[2].author == "卢钺"
-    assert book.unit(1).textbook_words == []
+    words = [item.word for item in book.unit(1).textbook_words]
+    assert "奇观" in words
+    assert "风平浪静" in words
+    assert "繁星" in words
+    assert book.exam_ranges["midterm"].units == [1, 2, 3, 4]
+    assert book.exam_ranges["final"].units == [1, 2, 3, 4, 5, 6, 7, 8]
 
 
 def test_lessons_match_requested_starter_titles() -> None:
@@ -41,6 +46,10 @@ def test_lessons_match_requested_starter_titles() -> None:
         assert [lesson.title for lesson in book.unit(number).lessons] == titles
     pieces = book.unit(3).lessons[0].pieces
     assert pieces == ["暮江吟", "题西林壁", "雪梅"]
+    assert book.unit(1).lessons[2].pieces == ["秋晚的江上", "花牛歌"]
+    assert book.unit(8).lessons[0].title == "我将无我，不负人民"
+    assert [poem.title for poem in book.unit(8).poems] == ["凉州词", "出塞", "夏日绝句"]
+    assert book.unit(8).poems[2].lines[-2:] == ["至今思项羽", "不肯过江东"]
 
 
 def test_list_skips_template(tmp_path: Path) -> None:
